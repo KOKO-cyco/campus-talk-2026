@@ -24,6 +24,7 @@
     --ink-tint:#18181a;
     --line:rgba(127,127,127,.28);
     --line-soft:rgba(127,127,127,.16);
+    --brick:#A8503A;   /* 只用在图解里的重点色 */
 
     --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
     --serif-en:"Playfair Display","Source Serif 4",Georgia,serif;
@@ -325,6 +326,22 @@
     border:1px solid var(--line);padding:.08em .38em;white-space:nowrap;
   }
 
+  /* ============ 手绘图解 ============
+     线条抖动由 SVG 滤镜生成（feTurbulence + feDisplacementMap），
+     不引任何图形库。文字不套滤镜，保证投影上清晰。 */
+  .figure{width:100%;max-width:1120px;margin:0 auto}
+  .figure svg{width:100%;height:auto;display:block;overflow:visible}
+  .fig-ink{stroke:currentColor;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  .fig-t{font-family:var(--sans-zh);fill:currentColor}
+  .fig-m{font-family:var(--mono);fill:currentColor;opacity:.45}
+  .fig-title{font-weight:600;font-size:21px}
+  .fig-note{font-size:15px;opacity:.6}
+  .fig-brick{fill:var(--brick)}
+  .fig-onbrick{fill:var(--paper);opacity:.95}
+  .fig-fill1{fill:rgba(127,127,127,.12)}
+  .fig-fill2{fill:rgba(127,127,127,.22)}
+  .fig-fill3{fill:rgba(127,127,127,.32)}
+
   /* ============ 控件 ============ */
   .controls{
     position:fixed;right:var(--pad-x);bottom:clamp(1rem,2.6vh,1.8rem);
@@ -531,11 +548,61 @@
 
     <section class="slide light" data-act="01 跑通只是入场券" data-title="做完了的四个层级">
       <p class="eyebrow">下次说「做完了」之前，先问自己在第几级</p>
-      <div class="items">
-        <div class="item"><span class="item__k">L1</span><span class="item__v">编译通过<small>只证明语法没错、名字都拼对了。编译器检查不了任何逻辑</small></span></div>
-        <div class="item"><span class="item__k">L2</span><span class="item__v">跑起来了<small>在你的环境、你的用法下走通一次。样本量是 1</small></span></div>
-        <div class="item"><span class="item__k">L3</span><span class="item__v">关键路径验证过<small>正常流程、异常流程、边界情况都试了，失败时的表现你也见过</small></span></div>
-        <div class="item"><span class="item__k">L4</span><span class="item__v">长稳跑过<small>连续跑几小时不出事，反复开关几十次不出事</small></span></div>
+
+      <div class="figure">
+        <svg viewBox="0 0 1120 470" role="img"
+             aria-label="做完了的四个层级：L1 编译通过、L2 跑起来了、L3 关键路径验证过、L4 长稳跑过。新人常停在 L1 就说做完了。">
+          <defs>
+            <filter id="rgh" x="-6%" y="-6%" width="112%" height="112%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="3" seed="9" result="n"/>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <filter id="rgh2" x="-8%" y="-8%" width="116%" height="116%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+
+          <g filter="url(#rgh)">
+            <rect class="fig-ink fig-fill1" x="40"  y="330" width="230" height="70"/>
+            <rect class="fig-ink fig-fill2" x="300" y="255" width="230" height="145"/>
+            <rect class="fig-ink fig-fill3" x="560" y="165" width="230" height="235"/>
+            <rect class="fig-ink fig-brick" x="820" y="60"  width="230" height="340"/>
+            <path class="fig-ink" d="M20 400 H1100"/>
+          </g>
+
+          <!-- 火柴人：站在 L1 上就说做完了 -->
+          <g filter="url(#rgh2)" class="fig-ink">
+            <circle cx="155" cy="252" r="21"/>
+            <path d="M155 273 V318"/>
+            <path d="M155 285 L131 302 M155 285 L179 302"/>
+            <path d="M155 318 L138 330 M155 318 L172 330"/>
+            <path d="M145 248 q4 -6 8 0 M157 248 q4 -6 8 0" stroke-width="2"/>
+            <path d="M146 258 q9 8 18 0" stroke-width="2"/>
+          </g>
+          <g filter="url(#rgh2)">
+            <path class="fig-ink" d="M30 150 H286 V196 H30 Z" fill="none"/>
+            <path class="fig-ink" d="M120 196 L138 216 L154 196" stroke-width="2.6"/>
+          </g>
+          <text class="fig-t fig-title" x="158" y="181" text-anchor="middle">「做完了！」</text>
+
+          <text class="fig-m" x="155" y="424" text-anchor="middle" font-size="14" letter-spacing="2">L1</text>
+          <text class="fig-m" x="415" y="424" text-anchor="middle" font-size="14" letter-spacing="2">L2</text>
+          <text class="fig-m" x="675" y="424" text-anchor="middle" font-size="14" letter-spacing="2">L3</text>
+          <text class="fig-m" x="935" y="424" text-anchor="middle" font-size="14" letter-spacing="2">L4</text>
+
+          <text class="fig-t fig-title" x="155" y="450" text-anchor="middle">编译通过</text>
+          <text class="fig-t fig-title" x="415" y="450" text-anchor="middle">跑起来了</text>
+          <text class="fig-t fig-title" x="675" y="450" text-anchor="middle">关键路径验证过</text>
+          <text class="fig-t fig-title" x="935" y="450" text-anchor="middle">长稳跑过</text>
+
+          <text class="fig-t fig-note" x="155" y="368" text-anchor="middle">语法没错而已</text>
+          <text class="fig-t fig-note" x="415" y="330" text-anchor="middle">样本量是 1</text>
+          <text class="fig-t fig-note" x="675" y="290" text-anchor="middle">异常和边界都试了</text>
+          <text class="fig-t fig-note fig-onbrick" x="935" y="240" text-anchor="middle">几小时不出事</text>
+
+          <text class="fig-t fig-brick" x="935" y="38" text-anchor="middle" font-size="24" font-weight="600">这里才叫做完</text>
+        </svg>
       </div>
       <p class="lead">停在哪一级都可以，<b>但你要说清楚停在哪一级</b>。<br>
       把 L1 说成「做完了」，是把风险转移给了信你的人。</p>
