@@ -418,6 +418,19 @@
 </head>
 <body>
 
+<!-- 手绘抖动滤镜：所有图解共用一份 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="rgh" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="3" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rgh2" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
 
 <div class="deck">
   <header class="rail">
@@ -552,17 +565,6 @@
       <div class="figure">
         <svg viewBox="0 0 1120 470" role="img"
              aria-label="做完了的四个层级：L1 编译通过、L2 跑起来了、L3 关键路径验证过、L4 长稳跑过。新人常停在 L1 就说做完了。">
-          <defs>
-            <filter id="rgh" x="-6%" y="-6%" width="112%" height="112%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="3" seed="9" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-            <filter id="rgh2" x="-8%" y="-8%" width="116%" height="116%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-          </defs>
-
           <g filter="url(#rgh)">
             <rect class="fig-ink fig-fill1" x="40"  y="330" width="230" height="70"/>
             <rect class="fig-ink fig-fill2" x="300" y="255" width="230" height="145"/>
@@ -775,11 +777,38 @@
 
     <section class="slide light" data-act="03 每次试错都有价格" data-title="验证的价目表">
       <p class="eyebrow">同一个结论，四种价格</p>
-      <div class="items">
-        <div class="item"><span class="item__k">秒</span><span class="item__v">把代码读一遍<small>最便宜。很多「猜」其实翻两个文件就能变成「知道」</small></span></div>
-        <div class="item"><span class="item__k">分钟</span><span class="item__v">编译一次 / 加一行日志<small>还是只花你自己的时间，随便花</small></span></div>
-        <div class="item"><span class="item__k">十几分钟</span><span class="item__v">烧一次板子<small>开始占用硬件，而且人得守在旁边</small></span></div>
-        <div class="item"><span class="item__k">半天</span><span class="item__v">约人一起联调<small>最贵。花的是别人的时间，而且约不到就得等</small></span></div>
+
+      <div class="figure">
+        <svg viewBox="0 28 1120 400" role="img"
+             aria-label="验证的四种价格：读代码要几秒，编译加日志要几分钟，烧一次板子要十几分钟，约人联调要半天">
+          <g filter="url(#rgh)">
+            <path class="fig-ink fig-fill1" d="M40 302 L74 254 H240 V350 H74 Z"/>
+            <path class="fig-ink fig-fill2" d="M278 286 L312 222 H503 V350 H312 Z"/>
+            <path class="fig-ink fig-fill3" d="M541 265 L575 180 H791 V350 H575 Z"/>
+            <path class="fig-ink fig-brick" d="M829 239 L863 128 H1084 V350 H863 Z"/>
+            <circle class="fig-ink" cx="62"  cy="302" r="7"/>
+            <circle class="fig-ink" cx="300" cy="286" r="7"/>
+            <circle class="fig-ink" cx="563" cy="265" r="7"/>
+            <circle class="fig-ink" cx="851" cy="239" r="7"/>
+            <path class="fig-ink" d="M40 392 H1076 M1058 382 L1082 392 L1058 402"/>
+          </g>
+
+          <text class="fig-t" x="157" y="296" text-anchor="middle" font-size="25" font-weight="600">几秒</text>
+          <text class="fig-t" x="408" y="278" text-anchor="middle" font-size="25" font-weight="600">几分钟</text>
+          <text class="fig-t" x="683" y="253" text-anchor="middle" font-size="25" font-weight="600">十几分钟</text>
+          <text class="fig-t fig-onbrick" x="973" y="223" text-anchor="middle" font-size="25" font-weight="600">半天</text>
+
+          <text class="fig-t fig-note" x="157" y="326" text-anchor="middle">把代码读一遍</text>
+          <text class="fig-t fig-note" x="408" y="316" text-anchor="middle">编译 / 加一行日志</text>
+          <text class="fig-t fig-note" x="683" y="304" text-anchor="middle">烧一次板子</text>
+          <text class="fig-t fig-note fig-onbrick" x="973" y="288" text-anchor="middle">约人一起联调</text>
+
+          <text class="fig-t fig-note" x="683" y="332" text-anchor="middle" opacity=".55">还要守在旁边</text>
+          <text class="fig-t fig-note fig-onbrick" x="973" y="318" text-anchor="middle">花的是别人的时间</text>
+
+          <text class="fig-t fig-note" x="40" y="418" opacity=".55">最便宜</text>
+          <text class="fig-t fig-brick" x="1076" y="420" text-anchor="end" font-size="19" font-weight="600">越往右越贵</text>
+        </svg>
       </div>
       <p class="lead">新人常见的失误不是不会验证，是<b>一上来就用最贵的那种</b>。<br>
       养成习惯：动手之前先问一句「这件事有没有更便宜的确认方式」。</p>
@@ -911,17 +940,36 @@
     <section class="slide light" data-act="05 AI 替不了判断" data-title="分界线">
       <p class="eyebrow">先划一条线</p>
       <h2>AI 的语料里，<br>有没有你这块板子？</h2>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">它很强的地方</span>
-          <span class="cell__val">越往上层，<br>越好用</span>
-          <span class="cell__note">读懂一份陌生代码、通读一个协议实现、在几万行里找出耦合点。人读要一周的事，它几分钟给你一张地图。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">它使不上劲的地方</span>
-          <span class="cell__val">越靠近硬件，<br>越指望不上</span>
-          <span class="cell__note">你这块板的引脚极性、这颗传感器的上电时序、这一版内核驱动的脾气。公开资料里没有的东西，它也没有。</span>
-        </div>
+      <div class="figure">
+        <svg viewBox="0 0 1120 430" role="img"
+             aria-label="上层的应用逻辑、协议实现、通用算法，AI 读得很快；越靠近硬件的引脚极性、上电时序、内核脾气，公开资料里查不到，只能靠你">
+          <g filter="url(#rgh)">
+            <path class="fig-ink fig-fill1" d="M40 30 H700 V170 H40 Z"/>
+            <path class="fig-ink fig-fill3" d="M40 250 H700 V400 H40 Z"/>
+            <path class="fig-ink" d="M40 210 H700" stroke-dasharray="14 12" stroke-width="2.4"/>
+          </g>
+
+          <text class="fig-t" x="66" y="70" font-size="23" font-weight="600">AI 读得很快</text>
+          <text class="fig-t fig-note" x="66" y="106">应用逻辑 · 协议实现 · 通用算法</text>
+          <text class="fig-t fig-note" x="66" y="138" opacity=".5">人读要一周的几万行，它几分钟给你一张地图</text>
+
+          <text class="fig-t fig-note" x="370" y="203" text-anchor="middle" opacity=".7">公开资料到此为止</text>
+
+          <text class="fig-t fig-brick" x="66" y="292" font-size="23" font-weight="600">只有你知道</text>
+          <text class="fig-t fig-note" x="66" y="328">引脚极性 · 上电时序 · 这版内核的脾气</text>
+          <text class="fig-t fig-note" x="66" y="360" opacity=".5">网上查不到的东西，它也没有</text>
+
+          <!-- 你手上那块板 -->
+          <g filter="url(#rgh2)">
+            <path class="fig-ink fig-fill1" d="M790 250 H1080 V400 H790 Z"/>
+            <path class="fig-ink fig-fill3" d="M865 292 H985 V352 H865 Z"/>
+            <path class="fig-ink" d="M865 306 H840 M865 322 H840 M865 338 H840
+                                     M985 306 H1010 M985 322 H1010 M985 338 H1010" stroke-width="2.4"/>
+            <path class="fig-ink" d="M812 372 h16 M840 372 h16 M868 372 h16 M896 372 h16 M924 372 h16" stroke-width="4"/>
+            <circle class="fig-ink" cx="1040" cy="278" r="11"/>
+          </g>
+          <text class="fig-t fig-note" x="935" y="234" text-anchor="middle" opacity=".75">你手上这块</text>
+        </svg>
       </div>
       <p class="lead">判断方法很简单：<b>这个知识，在网上查得到吗？</b>查不到的，只能靠你。</p>
     </section>
@@ -950,10 +998,41 @@
 
     <section class="slide light" data-act="05 AI 替不了判断" data-title="必须留在手上的三样">
       <p class="eyebrow">不要外包出去的三样</p>
-      <div class="items">
-        <div class="item"><span class="item__k">一</span><span class="item__v">调试<small>调试的输入是现象，不是文字。花屏、卡顿、示波器上的波形、串口刷出来的那一屏——它拿不到现场，只有你在</small></span></div>
-        <div class="item"><span class="item__k">二</span><span class="item__v">读源码<small>AI 给你的永远是「一个看起来合理的答案」。不去源头核对的人，会被它牵着走。这条在 AI 时代反而更重要</small></span></div>
-        <div class="item"><span class="item__k">三</span><span class="item__v">把链路读全的耐心<small>上板一次十几分钟还要占设备，这个成本 AI 降不下来。所以「先想清楚再动手」不但没过时，还更值钱了</small></span></div>
+
+      <div class="figure">
+        <svg viewBox="0 0 1120 400" role="img"
+             aria-label="必须留在手上的三样：调试、读源码、把链路读全的耐心">
+          <g filter="url(#rgh)">
+            <path class="fig-ink fig-fill1" d="M110 40 H310 V160 H110 Z"/>
+            <path class="fig-ink" d="M128 108 H158 V76 H188 V140 H218 V96 H248 V122 H292" stroke-width="3.4"/>
+
+            <path class="fig-ink" d="M492 46 q-20 0 -20 26 v16 q0 14 -16 14 q16 0 16 14 v16 q0 26 20 26"/>
+            <path class="fig-ink" d="M648 46 q20 0 20 26 v16 q0 14 16 14 q-16 0 -16 14 v16 q0 26 -20 26"/>
+            <path class="fig-ink" d="M508 78 H632 M508 104 H600 M508 130 H620" stroke-width="2.6"/>
+
+            <path class="fig-ink fig-fill1" d="M815 78 H875 V138 H815 Z"/>
+            <path class="fig-ink fig-fill2" d="M900 78 H960 V138 H900 Z"/>
+            <path class="fig-ink fig-brick" d="M985 78 H1045 V138 H985 Z"/>
+            <path class="fig-ink" d="M875 108 H896 M890 101 L899 108 L890 115
+                                     M960 108 H981 M975 101 L984 108 L975 115" stroke-width="2.6"/>
+          </g>
+
+          <text class="fig-t" x="210" y="228" text-anchor="middle" font-size="24" font-weight="600">调试</text>
+          <text class="fig-t" x="570" y="228" text-anchor="middle" font-size="24" font-weight="600">读源码</text>
+          <text class="fig-t" x="930" y="228" text-anchor="middle" font-size="24" font-weight="600">把链路读全</text>
+
+          <text class="fig-t fig-note" x="210" y="268" text-anchor="middle">输入是现象，不是文字</text>
+          <text class="fig-t fig-note" x="210" y="296" text-anchor="middle" opacity=".5">它拿不到现场，只有你在</text>
+
+          <text class="fig-t fig-note" x="570" y="268" text-anchor="middle">它给的永远「看起来合理」</text>
+          <text class="fig-t fig-note" x="570" y="296" text-anchor="middle" opacity=".5">不去源头核对，就被牵着走</text>
+
+          <text class="fig-t fig-note" x="930" y="268" text-anchor="middle">上板一次十几分钟</text>
+          <text class="fig-t fig-note" x="930" y="296" text-anchor="middle" opacity=".5">这个成本 AI 降不下来</text>
+
+          <path class="fig-ink" d="M40 340 H1080" stroke-width="2" opacity=".3" filter="url(#rgh2)"/>
+          <text class="fig-t fig-brick" x="560" y="378" text-anchor="middle" font-size="20" font-weight="600">这三样，练一次是一次</text>
+        </svg>
       </div>
     </section>
 
