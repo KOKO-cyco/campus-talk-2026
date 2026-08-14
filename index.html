@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，判断标准要换的四件事，附十二条生存小技巧。">
+<meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，判断标准要换的五件事，附十二条生存小技巧。">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8C%3C/text%3E%3C/svg%3E">
 <title>能跑起来，只是开始</title>
@@ -305,7 +305,7 @@
   .tip--warn{padding-left:1.4rem;padding-right:1.4rem}
 
   /* ============ Recap ============ */
-  .recap{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+  .recap{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
   .recap__col{
     padding:clamp(1rem,2.6vh,2rem) clamp(.9rem,1.6vw,1.6rem);
     display:flex;flex-direction:column;gap:.9rem;
@@ -380,6 +380,10 @@
   .idx__t{font-family:var(--serif-zh);font-size:.98rem;font-weight:600;line-height:1.4}
 
   /* ============ 响应式 ============ */
+  @media (max-width:1240px) and (min-width:861px){
+    .recap{grid-template-columns:repeat(3,1fr)}
+  }
+
   @media (max-width:860px){
     :root{--pad-x:7vw}
     .compare,.recap{grid-template-columns:1fr}
@@ -417,7 +421,7 @@
     <section class="slide light" data-act="开场" data-title="封面">
       <p class="eyebrow">分享 · 嵌入式 2026 校招</p>
       <h1>能跑起来，<br>只是开始</h1>
-      <p class="lead">从学生到工程师，判断标准要换的四件事。<br>最后附一份马上能用的生存小技巧。</p>
+      <p class="lead">从学生到工程师，判断标准要换的五件事。<br>最后附一份马上能用的生存小技巧。</p>
       <p class="hint">→ 方向键翻页 · ESC 目录</p>
     </section>
 
@@ -430,7 +434,7 @@
     <section class="slide light" data-act="开场" data-title="这只是第一步">
       <p class="eyebrow">而在工作里</p>
       <p class="quote">跑通，只是<em>第一步</em>。</p>
-      <p class="lead">今天讲四个你入职后很快会撞上的落差。<br>不讲技术，讲的是<b>判断标准要怎么换</b>——因为技术你迟早学得会，判断标准没人会专门教你。</p>
+      <p class="lead">今天讲五个你入职后很快会撞上的落差。<br>不讲技术，讲的是<b>判断标准要怎么换</b>——因为技术你迟早学得会，判断标准没人会专门教你。</p>
     </section>
 
     <section class="slide light" data-act="开场" data-title="本次内容">
@@ -440,6 +444,7 @@
         <div class="item"><span class="item__k">02</span><span class="item__v">代码要活很多年<small>你不是唯一的读者，也不是最后一个</small></span></div>
         <div class="item"><span class="item__k">03</span><span class="item__v">每次试错都有价格<small>学生时代的最优策略，在这里会失效</small></span></div>
         <div class="item"><span class="item__k">04</span><span class="item__v">结论要站得住<small>你说的话，别人会拿去做决定</small></span></div>
+        <div class="item"><span class="item__k">05</span><span class="item__v">AI 替不了判断<small>它让「能跑」变得不要钱，于是标准整个上移</small></span></div>
         <div class="item"><span class="item__k">附</span><span class="item__v">嵌入式生存小技巧<small>十二条，入职第一周就用得上</small></span></div>
       </div>
     </section>
@@ -828,10 +833,82 @@
       <p class="quote">说「不确定」不丢人。<br>把不确定的事<br><em>说成确定的，才丢人</em>。</p>
     </section>
 
+    <!-- ══ 第五幕 ══ -->
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="第五幕">
+      <div class="act"><span class="act__num">05</span><h2 class="act__title">AI 替不了判断</h2></div>
+      <hr class="rule">
+      <p class="lead">前面四条，在 AI 出现之前就成立。<br>这一条要说的是：<b>AI 让它们更成立了。</b></p>
+    </section>
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="分界线">
+      <p class="eyebrow">先划一条线</p>
+      <h2>AI 的语料里，<br>有没有你这块板子？</h2>
+      <div class="compare">
+        <div class="cell">
+          <span class="cell__tag">它很强的地方</span>
+          <span class="cell__val">越往上层，<br>越好用</span>
+          <span class="cell__note">读懂一份陌生代码、通读一个协议实现、在几万行里找出耦合点。人读要一周的事，它几分钟给你一张地图。</span>
+        </div>
+        <div class="cell cell--now">
+          <span class="cell__tag">它使不上劲的地方</span>
+          <span class="cell__val">越靠近硬件，<br>越指望不上</span>
+          <span class="cell__note">你这块板的引脚极性、这颗传感器的上电时序、这一版内核驱动的脾气。公开资料里没有的东西，它也没有。</span>
+        </div>
+      </div>
+      <p class="lead">判断方法很简单：<b>这个知识，在网上查得到吗？</b>查不到的，只能靠你。</p>
+    </section>
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="故事 · 一个引脚的极性">
+      <p class="eyebrow">真实发生过</p>
+      <div class="story">
+        <p class="story__body">
+          调一颗摄像头，怎么都不出图，一直报「读不到传感器 ID」。<br><br>
+          配置是照着同一个接口上另一颗传感器抄的，看起来一模一样。
+          差别只在一个地方：那颗的复位脚是<b>高电平有效</b>，这颗必须<b>低电平有效</b>。<br><br>
+          改完这一个字，立刻就认出来了。<b>整件事唯一的实质差异，就是这一行。</b>
+        </p>
+        <p class="story__punch">网上查不到的那一行，<br><em>才是你的价值所在。</em></p>
+      </div>
+    </section>
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="能跑变得不要钱">
+      <p class="eyebrow">真正被改变的是什么</p>
+      <h2>以前「能跑起来」还算个门槛。<br>现在十分钟就有一份能跑的。</h2>
+      <p class="lead">产出变便宜之后，<b>检验就成了瓶颈</b>。<br>
+      回放时好时坏、画面底部发糊、延时十秒、对讲断断续续——
+      这些没有一个是编译器拦得住的，全是人在板子前面看出来的。<br>
+      <b>谁能判断「这份代码能不能交付」，谁的价值就在涨。</b></p>
+    </section>
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="必须留在手上的三样">
+      <p class="eyebrow">不要外包出去的三样</p>
+      <div class="items">
+        <div class="item"><span class="item__k">一</span><span class="item__v">调试<small>调试的输入是现象，不是文字。花屏、卡顿、示波器上的波形、串口刷出来的那一屏——它拿不到现场，只有你在</small></span></div>
+        <div class="item"><span class="item__k">二</span><span class="item__v">读源码<small>AI 给你的永远是「一个看起来合理的答案」。不去源头核对的人，会被它牵着走。这条在 AI 时代反而更重要</small></span></div>
+        <div class="item"><span class="item__k">三</span><span class="item__v">把链路读全的耐心<small>上板一次十几分钟还要占设备，这个成本 AI 降不下来。所以「先想清楚再动手」不但没过时，还更值钱了</small></span></div>
+      </div>
+    </section>
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="怎么练">
+      <p class="eyebrow">具体可以怎么练</p>
+      <div class="items">
+        <div class="item"><span class="item__k">01</span><span class="item__v">让它写，但你要说得出它为什么这么写<small>说不上来的地方，就是你欠的债。这比自己吭哧写一遍效率高，前提是你真的去追问</small></span></div>
+        <div class="item"><span class="item__k">02</span><span class="item__v">新领域，先自己写一遍再让它 review<small>反过来（它写你看）很容易产生「我看懂了」的错觉</small></span></div>
+        <div class="item"><span class="item__k">03</span><span class="item__v">主动保留没有 AI 的场景<small>看波形、量电平、读手册里的时序图。这些是纯手感，练一次是一次</small></span></div>
+        <div class="item"><span class="item__k">04</span><span class="item__v">把踩过的坑写下来<small>你写下的那些别处查不到的东西，就是你自己的语料。AI 没有，别人也没有</small></span></div>
+      </div>
+    </section>
+
+    <section class="slide light" data-act="05 AI 替不了判断" data-title="落点 · 五">
+      <p class="eyebrow">第五幕 · 落点</p>
+      <p class="quote">AI 让「能跑」<br>变得不要钱。<br><em>标准整个上移了。</em></p>
+    </section>
+
     <!-- ══ 回顾 ══ -->
 
-    <section class="slide light" data-act="回顾" data-title="四条回顾">
-      <p class="eyebrow">回到这四条</p>
+    <section class="slide light" data-act="回顾" data-title="五条回顾">
+      <p class="eyebrow">回到这五条</p>
       <div class="recap">
         <div class="recap__col">
           <span class="recap__n">01</span>
@@ -853,8 +930,13 @@
           <span class="recap__h">结论要站得住</span>
           <span class="recap__p">分清验证过的和猜的，做不到也说清楚。</span>
         </div>
+        <div class="recap__col">
+          <span class="recap__n">05</span>
+          <span class="recap__h">AI 替不了判断</span>
+          <span class="recap__p">产出变便宜，检验就成了瓶颈。</span>
+        </div>
       </div>
-      <p class="lead">四条其实是同一件事的四个侧面：<b>你要开始为那些你看不见的时刻负责。</b><br>
+      <p class="lead">五条其实是同一件事的五个侧面：<b>你要开始为那些你看不见的时刻负责。</b><br>
       为你不在场时它还能不能跑，为下一个打开这份代码的人，为信了你那句话的人。</p>
     </section>
 
