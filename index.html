@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，思维要换的三件事。">
+<meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，思维要换的三件事，附九条生存小技巧。">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8C%3C/text%3E%3C/svg%3E">
 <title>能跑起来，只是开始</title>
@@ -19,7 +19,6 @@
     --rule:    #D6D2C7;
     --accent:  #0B5D5A;
     --signal:  #B3590A;
-    --shadow:  0 1px 0 rgba(19,22,26,.04);
 
     --font-sans: "PingFang SC", "HarmonyOS Sans SC", "Hiragino Sans GB",
                  "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei",
@@ -44,7 +43,6 @@
       --rule:    #282E36;
       --accent:  #4EB5AF;
       --signal:  #E9A046;
-      --shadow:  0 1px 0 rgba(0,0,0,.3);
     }
   }
 
@@ -58,7 +56,6 @@
     --rule:    #282E36;
     --accent:  #4EB5AF;
     --signal:  #E9A046;
-    --shadow:  0 1px 0 rgba(0,0,0,.3);
   }
 
   /* ── base ───────────────────────────────────────────────── */
@@ -140,11 +137,7 @@
   .rail__count i { color: var(--ink-dim); font-style: normal; }
 
   /* ── stage ──────────────────────────────────────────────── */
-  .stage {
-    position: relative;
-    flex: 1 1 auto;
-    overflow: hidden;
-  }
+  .stage { position: relative; flex: 1 1 auto; overflow: hidden; }
 
   .slide {
     position: absolute;
@@ -171,7 +164,7 @@
     to   { opacity: 1; transform: none; }
   }
 
-  /* ── slide parts ────────────────────────────────────────── */
+  /* ── shared parts ───────────────────────────────────────── */
   .eyebrow {
     font-family: var(--font-mono);
     font-size: .7rem;
@@ -189,6 +182,7 @@
     background: var(--rule);
     max-width: 8rem;
   }
+  .eyebrow--warn { color: var(--signal); }
 
   h1 {
     margin: 0;
@@ -212,10 +206,11 @@
   .lead {
     margin: 0;
     font-size: clamp(1rem, 2vw, 1.35rem);
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--ink-mid);
-    max-width: 34em;
+    max-width: 36em;
   }
+  .lead b { color: var(--ink); font-weight: 600; }
 
   .quote {
     margin: 0;
@@ -230,10 +225,11 @@
   .quote em { font-style: normal; color: var(--signal); }
 
   .meta {
+    margin: 0;
     font-family: var(--font-mono);
-    font-size: .78rem;
-    line-height: 1.9;
-    letter-spacing: .06em;
+    font-size: clamp(.75rem, 1.4vw, .88rem);
+    line-height: 2;
+    letter-spacing: .05em;
     color: var(--ink-dim);
   }
 
@@ -245,11 +241,13 @@
     color: var(--ink-dim);
   }
 
+  .rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+
   /* act divider */
   .act { display: flex; align-items: baseline; gap: clamp(1rem, 4vw, 3rem); flex-wrap: wrap; }
   .act__num {
     font-family: var(--font-mono);
-    font-size: clamp(4rem, 16vw, 12rem);
+    font-size: clamp(4rem, 15vw, 11rem);
     font-weight: 300;
     line-height: .9;
     color: var(--accent);
@@ -262,7 +260,7 @@
     letter-spacing: -.005em;
   }
 
-  /* comparison table */
+  /* comparison */
   .compare {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -296,31 +294,33 @@
   }
   .cell__note {
     font-size: clamp(.85rem, 1.5vw, 1rem);
-    line-height: 1.65;
+    line-height: 1.7;
     color: var(--ink-mid);
     margin-top: auto;
   }
 
-  /* numbered / plain lists */
-  .items { display: flex; flex-direction: column; gap: 1px; background: var(--rule);
-           border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  /* item list */
+  .items {
+    display: flex; flex-direction: column; gap: 1px; background: var(--rule);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  }
   .item {
     background: var(--ground);
-    padding: clamp(.85rem, 2.2vh, 1.4rem) 0;
+    padding: clamp(.8rem, 2vh, 1.35rem) 0;
     display: grid;
-    grid-template-columns: 3.2rem 1fr;
+    grid-template-columns: 3.4rem 1fr;
     gap: 1rem;
     align-items: baseline;
   }
   .item__k {
     font-family: var(--font-mono);
-    font-size: .8rem;
+    font-size: .78rem;
     letter-spacing: .1em;
     color: var(--accent);
     font-variant-numeric: tabular-nums;
   }
   .item__v {
-    font-size: clamp(1.05rem, 2.4vw, 1.7rem);
+    font-size: clamp(1.02rem, 2.3vw, 1.6rem);
     font-weight: 600;
     line-height: 1.45;
     text-wrap: balance;
@@ -328,31 +328,95 @@
   .item__v small {
     display: block;
     margin-top: .4rem;
-    font-size: clamp(.85rem, 1.5vw, 1rem);
+    font-size: clamp(.83rem, 1.45vw, .98rem);
     font-weight: 400;
     color: var(--ink-mid);
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
-  /* recap grid */
-  .recap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-           background: var(--rule); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
-  .recap__col { background: var(--ground); padding: clamp(1rem, 2.5vw, 1.8rem);
-                display: flex; flex-direction: column; gap: .7rem; }
-  .recap__n { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .1em; color: var(--accent); }
-  .recap__h { font-size: clamp(1rem, 2vw, 1.45rem); font-weight: 700; line-height: 1.35; }
-  .recap__p { font-size: clamp(.82rem, 1.4vw, .98rem); color: var(--ink-mid); line-height: 1.65; margin-top: auto; }
+  /* story */
+  .story {
+    border-left: 2px solid var(--accent);
+    padding-left: clamp(1rem, 3vw, 2.2rem);
+    display: flex; flex-direction: column;
+    gap: clamp(1rem, 2.5vh, 1.6rem);
+    max-width: 46em;
+  }
+  .story__body {
+    margin: 0;
+    font-size: clamp(.98rem, 2vw, 1.4rem);
+    line-height: 1.9;
+    color: var(--ink-mid);
+  }
+  .story__body b { color: var(--ink); font-weight: 600; }
+  .story__punch {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3.8vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+  .story__punch em { font-style: normal; color: var(--signal); }
 
-  .rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+  /* tips */
+  .tips {
+    display: flex; flex-direction: column; gap: 1px; background: var(--rule);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  }
+  .tip {
+    background: var(--ground);
+    padding: clamp(.85rem, 2vh, 1.4rem) 0;
+    display: grid;
+    grid-template-columns: 3.4rem 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .tip__n {
+    font-family: var(--font-mono);
+    font-size: .78rem;
+    letter-spacing: .1em;
+    color: var(--accent);
+    padding-top: .4rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .tip h3 {
+    margin: 0 0 .45rem;
+    font-size: clamp(1.02rem, 2.2vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+  .tip p {
+    margin: 0;
+    font-size: clamp(.83rem, 1.45vw, 1rem);
+    line-height: 1.75;
+    color: var(--ink-mid);
+    max-width: 44em;
+  }
+  .tip--warn { background: var(--panel); }
+  .tip--warn .tip__n { color: var(--signal); }
+
+  /* recap */
+  .recap {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule);
+    border-radius: 3px; overflow: hidden;
+  }
+  .recap__col {
+    background: var(--ground); padding: clamp(1rem, 2.5vw, 1.8rem);
+    display: flex; flex-direction: column; gap: .7rem;
+  }
+  .recap__n { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .1em; color: var(--accent); }
+  .recap__h { font-size: clamp(1rem, 2vw, 1.45rem); font-weight: 700; line-height: 1.35; }
+  .recap__p { font-size: clamp(.8rem, 1.4vw, .96rem); color: var(--ink-mid); line-height: 1.7; margin-top: auto; }
 
   /* ── controls ───────────────────────────────────────────── */
   .controls {
     position: fixed;
     right: var(--pad-x);
     bottom: clamp(1rem, 3vh, 2rem);
-    display: flex;
-    gap: .4rem;
-    z-index: 20;
+    display: flex; gap: .4rem; z-index: 20;
   }
   .btn {
     width: 2.4rem; height: 2.4rem;
@@ -362,31 +426,27 @@
     border-radius: 2px;
     color: var(--ink-mid);
     cursor: pointer;
-    font-size: .95rem;
-    line-height: 1;
+    font-size: .95rem; line-height: 1;
     transition: border-color .15s, color .15s;
   }
   .btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
   .btn:disabled { opacity: .3; cursor: default; }
   .btn:focus-visible, .timer:focus-visible, .idx__item:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
+    outline: 2px solid var(--accent); outline-offset: 2px;
   }
 
   .progress {
     position: fixed; left: 0; bottom: 0;
     height: 2px; background: var(--accent);
-    transition: width .28s ease;
-    z-index: 20;
+    transition: width .28s ease; z-index: 20;
   }
 
-  /* ── index overlay ──────────────────────────────────────── */
+  /* ── index ──────────────────────────────────────────────── */
   .idx {
     position: fixed; inset: 0; z-index: 40;
     background: var(--ground);
     padding: clamp(1.5rem, 5vh, 3rem) var(--pad-x);
-    overflow-y: auto;
-    display: none;
+    overflow-y: auto; display: none;
   }
   .idx.is-open { display: block; }
   .idx__head {
@@ -397,28 +457,27 @@
   }
   .idx__head b { color: var(--ink); font-weight: 600; }
   .idx__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     gap: 1px; background: var(--rule);
     border: 1px solid var(--rule); border-radius: 3px; overflow: hidden;
   }
   .idx__item {
     background: var(--ground); border: 0; text-align: left;
-    padding: 1rem 1.1rem; cursor: pointer;
-    display: flex; flex-direction: column; gap: .5rem;
+    padding: .9rem 1.05rem; cursor: pointer;
+    display: flex; flex-direction: column; gap: .45rem;
     font-family: inherit; color: var(--ink);
     transition: background .15s;
   }
   .idx__item:hover { background: var(--panel); }
   .idx__item.is-current { background: var(--panel-2); }
-  .idx__n { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; color: var(--accent); }
-  .idx__t { font-size: .95rem; font-weight: 600; line-height: 1.45; }
+  .idx__n { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em; color: var(--accent); }
+  .idx__t { font-size: .92rem; font-weight: 600; line-height: 1.45; }
 
   /* ── responsive ─────────────────────────────────────────── */
   @media (max-width: 720px) {
     .compare, .recap { grid-template-columns: 1fr; }
     .timer, .rail__doc span { display: none; }
-    .item { grid-template-columns: 2.4rem 1fr; gap: .7rem; }
+    .item, .tip { grid-template-columns: 2.4rem 1fr; gap: .7rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -434,176 +493,208 @@
     <span class="rail__doc"><b>能跑起来，只是开始</b><span> · 嵌入式 2026 校招</span></span>
     <span class="rail__spacer"></span>
     <span class="rail__act" id="actLabel">开场</span>
-    <button class="timer" id="timer" type="button" title="点击开始 / 暂停，长按重置">
-      <span class="timer__dot"></span><span id="timerText">20:00</span>
+    <button class="timer" id="timer" type="button" title="点击开始 / 暂停，长按切换时长">
+      <span class="timer__dot"></span><span id="timerText">30:00</span>
     </button>
-    <span class="rail__count"><span id="cur">01</span><i>/18</i></span>
+    <span class="rail__count"><span id="cur">01</span><i>/<span id="tot">28</span></i></span>
   </header>
 
   <main class="stage" id="stage">
 
-    <!-- 1 · 封面 -->
+    <!-- ══ 开场 ══ -->
+
     <section class="slide" data-act="开场" data-title="封面">
       <p class="eyebrow">分享 · 嵌入式 2026 校招</p>
       <h1>能跑起来，<br>只是开始</h1>
-      <p class="lead">从学生到工程师，思维要换的三件事。</p>
+      <p class="lead">从学生到工程师，思维要换的三件事。<br>最后附一份马上能用的生存小技巧。</p>
       <p class="hint">→ 方向键翻页 · ESC 目录</p>
     </section>
 
-    <!-- 2 · 开场提问 -->
     <section class="slide" data-act="开场" data-title="先问一个问题">
       <p class="eyebrow">先问一个问题</p>
       <h2>你写完一份作业，<br>什么时候算「做完了」？</h2>
-      <p class="lead">大概率是——跑出正确结果，交上去，这件事就结束了。<br>四年下来，这个判断标准已经变成肌肉记忆。</p>
+      <p class="lead">大概率是——跑出正确结果，交上去，这件事就结束了。<br>四年下来，这个判断标准已经变成肌肉记忆，而且它一直是对的。</p>
     </section>
 
-    <!-- 3 · 转折 -->
     <section class="slide" data-act="开场" data-title="这只是第一步">
       <p class="eyebrow">而在工作里</p>
       <p class="quote">跑通，只是<em>第一步</em>。</p>
-      <p class="lead">今天想讲三个你入职后很快会撞上的落差。<br>不讲技术，讲的是判断标准要怎么换。</p>
+      <p class="lead">今天讲三个你入职后很快会撞上的落差。<br>不讲技术，讲的是<b>判断标准要怎么换</b>——因为技术你迟早学得会，判断标准没人会专门教你。</p>
     </section>
 
-    <!-- 4 · 总览 -->
-    <section class="slide" data-act="开场" data-title="三个落差">
+    <section class="slide" data-act="开场" data-title="本次内容">
       <p class="eyebrow">本次内容</p>
       <div class="items">
-        <div class="item"><span class="item__k">01</span><span class="item__v">跑通只是入场券<small>做完的标准，比你以为的高一层</small></span></div>
+        <div class="item"><span class="item__k">01</span><span class="item__v">跑通只是入场券<small>「做完」的标准，比你以为的高一层</small></span></div>
         <div class="item"><span class="item__k">02</span><span class="item__v">代码要活很多年<small>你不是唯一的读者，也不是最后一个</small></span></div>
         <div class="item"><span class="item__k">03</span><span class="item__v">每次试错都有价格<small>学生时代的最优策略，在这里会失效</small></span></div>
+        <div class="item"><span class="item__k">附</span><span class="item__v">嵌入式生存小技巧<small>九条，入职第一周就用得上</small></span></div>
       </div>
     </section>
 
-    <!-- 5 · 幕一 -->
+    <!-- ══ 第一幕 ══ -->
+
     <section class="slide" data-act="01 跑通只是入场券" data-title="第一幕">
-      <div class="act">
-        <span class="act__num">01</span>
-        <h2 class="act__title">跑通只是入场券</h2>
-      </div>
+      <div class="act"><span class="act__num">01</span><h2 class="act__title">跑通只是入场券</h2></div>
       <hr class="rule">
       <p class="lead">学校里，跑通是终点线。<br>工作里，跑通是起跑线。</p>
     </section>
 
-    <!-- 6 · 对照 1 -->
     <section class="slide" data-act="01 跑通只是入场券" data-title="判断标准对照">
       <p class="eyebrow">判断标准 · 对照</p>
       <div class="compare">
         <div class="cell">
           <span class="cell__tag">在学校</span>
           <span class="cell__val">跑通 ＝ 做完了</span>
-          <span class="cell__note">验收的人只看结果对不对。代码交上去之后，不会再有人打开它。</span>
+          <span class="cell__note">验收的人只看结果对不对。交上去之后，不会再有人打开它。</span>
         </div>
         <div class="cell cell--now">
           <span class="cell__tag">在工作</span>
           <span class="cell__val">跑通 ＝ 拿到入场券</span>
-          <span class="cell__note">结果对，只说明你可以开始接受检验了。真正的问题在后面。</span>
+          <span class="cell__note">结果对，只说明你可以开始接受检验了。真正的问题都在后面。</span>
         </div>
       </div>
     </section>
 
-    <!-- 7 · 展开 1 -->
-    <section class="slide" data-act="01 跑通只是入场券" data-title="跑通之后的三个问题">
-      <p class="eyebrow">跑通之后，才开始问的三件事</p>
-      <div class="items">
-        <div class="item"><span class="item__k">Q1</span><span class="item__v">换一个场景，还成立吗？<small>换块板子、换个网络环境、换个用户的用法——你验证过的那一条路，是不是唯一的路</small></span></div>
-        <div class="item"><span class="item__k">Q2</span><span class="item__v">别人接手，看得懂吗？<small>你不在的时候，这段代码要靠它自己解释自己</small></span></div>
-        <div class="item"><span class="item__k">Q3</span><span class="item__v">三个月后出问题，定位得到吗？<small>现场只会给你一段日志。那段日志里有没有你需要的东西，是你今天决定的</small></span></div>
+    <section class="slide" data-act="01 跑通只是入场券" data-title="故事 · 安静的失败">
+      <p class="eyebrow">真实发生过</p>
+      <div class="story">
+        <p class="story__body">
+          我改了一处配置，<b>编译通过，链接通过，一条警告都没有</b>，烧进板子——<br>
+          行为跟没改一样。<br><br>
+          不是代码写错了，是那处配置放在了错误的位置，<b>从头到尾没有生效</b>。
+          整个流程里没有任何一个环节报错，它只是安安静静地、完完整整地，什么都没做。
+        </p>
+        <p class="story__punch">没报错，<em>不代表做成了</em>。</p>
       </div>
     </section>
 
-    <!-- 8 · 落点 1 -->
+    <section class="slide" data-act="01 跑通只是入场券" data-title="跑通之后的三个问题">
+      <p class="eyebrow">跑通之后，才开始问的三件事</p>
+      <div class="items">
+        <div class="item"><span class="item__k">Q1</span><span class="item__v">换一个场景，还成立吗？<small>换块板子、换个网络、换个用户的用法——你验证过的那条路，是不是唯一的那条路</small></span></div>
+        <div class="item"><span class="item__k">Q2</span><span class="item__v">别人接手，看得懂吗？<small>你不在的时候，这段代码只能靠它自己解释自己</small></span></div>
+        <div class="item"><span class="item__k">Q3</span><span class="item__v">三个月后出问题，定位得到吗？<small>现场只会甩给你一段日志。那段日志里有没有你需要的东西，是你今天决定的</small></span></div>
+      </div>
+    </section>
+
     <section class="slide" data-act="01 跑通只是入场券" data-title="落点 · 一">
       <p class="eyebrow">第一幕 · 落点</p>
       <p class="quote">你交付的不是<br>「这次能跑」，<br>是<em>「以后也能跑」</em>。</p>
     </section>
 
-    <!-- 9 · 幕二 -->
+    <!-- ══ 第二幕 ══ -->
+
     <section class="slide" data-act="02 代码要活很多年" data-title="第二幕">
-      <div class="act">
-        <span class="act__num">02</span>
-        <h2 class="act__title">代码要活很多年</h2>
-      </div>
+      <div class="act"><span class="act__num">02</span><h2 class="act__title">代码要活很多年</h2></div>
       <hr class="rule">
-      <p class="lead">作业的生命周期是一个学期。<br>产品代码的生命周期，比你在这家公司待的时间还长。</p>
+      <p class="lead">作业的生命周期是一个学期。<br>产品代码的生命周期，通常比你在这家公司待的时间还长。</p>
     </section>
 
-    <!-- 10 · 对照 2 -->
     <section class="slide" data-act="02 代码要活很多年" data-title="生命周期对照">
       <p class="eyebrow">生命周期 · 对照</p>
       <div class="compare">
         <div class="cell">
           <span class="cell__tag">在学校</span>
           <span class="cell__val">写完就扔<br>读者只有你一个</span>
-          <span class="cell__note">怎么写都行，反正下学期就忘了，也没有人会来问你为什么这么写。</span>
+          <span class="cell__note">怎么写都行，下学期就忘了，也没人会来问你为什么这么写。</span>
         </div>
         <div class="cell cell--now">
           <span class="cell__tag">在工作</span>
           <span class="cell__val">活好几年<br>读者是一整个团队</span>
-          <span class="cell__note">会被人读、被人改、被人抄去别的模块。你写下的每一个决定都会被继承。</span>
+          <span class="cell__note">会被人读、被人改、被抄去别的模块。你写下的每个决定都会被继承。</span>
         </div>
       </div>
     </section>
 
-    <!-- 11 · 展开 2 -->
-    <section class="slide" data-act="02 代码要活很多年" data-title="临时补丁的代价">
-      <p class="eyebrow">「先跑通，回头再改」的代价</p>
-      <div class="items">
-        <div class="item"><span class="item__k">→</span><span class="item__v">那个「回头」，通常不会到来<small>需求永远排着队，没有人会给你专门留一段时间回去还债</small></span></div>
-        <div class="item"><span class="item__k">→</span><span class="item__v">临时方案会被当成范例<small>下一个人打开这份代码，默认你这么写是有道理的，然后照着抄</small></span></div>
-        <div class="item"><span class="item__k">→</span><span class="item__v">最后变成谁都绕不开的坑<small>等到想改的时候，已经有五个地方依赖它了</small></span></div>
+    <section class="slide" data-act="02 代码要活很多年" data-title="故事 · 没人敢删的代码">
+      <p class="eyebrow">真实发生过</p>
+      <div class="story">
+        <p class="story__body">
+          接手一份别人的代码，里面有一段做性能优化的逻辑。看着挺重要，<b>谁都不敢动</b>。<br><br>
+          查到最后才发现：因为一个参数始终对不上，这段代码<b>从写下的那天起，一次都没有真正执行过</b>。<br><br>
+          它在代码库里躺了很久。每个读到的人都以为它有用，每个想改附近代码的人都绕着它走。
+        </p>
+        <p class="story__punch">你留下的每一段代码<br>都在替你说话——<br><em>哪怕它什么都没做。</em></p>
       </div>
     </section>
 
-    <!-- 12 · 落点 2 -->
+    <section class="slide" data-act="02 代码要活很多年" data-title="临时补丁的代价">
+      <p class="eyebrow">「先跑通，回头再改」的代价</p>
+      <div class="items">
+        <div class="item"><span class="item__k">一</span><span class="item__v">那个「回头」，通常不会到来<small>需求永远排着队，没有人会专门给你留一段时间回去还债</small></span></div>
+        <div class="item"><span class="item__k">二</span><span class="item__v">临时方案会被当成范例<small>下一个人打开代码，默认你这么写是有道理的，然后照着抄一遍</small></span></div>
+        <div class="item"><span class="item__k">三</span><span class="item__v">最后变成谁都绕不开的坑<small>等到想改的时候，已经有五个地方依赖它了</small></span></div>
+      </div>
+    </section>
+
     <section class="slide" data-act="02 代码要活很多年" data-title="落点 · 二">
       <p class="eyebrow">第二幕 · 落点</p>
       <p class="quote">你是在<br>为下一个人写。<br><em>也包括三个月后的你自己。</em></p>
     </section>
 
-    <!-- 13 · 幕三 -->
+    <!-- ══ 第三幕 ══ -->
+
     <section class="slide" data-act="03 每次试错都有价格" data-title="第三幕">
-      <div class="act">
-        <span class="act__num">03</span>
-        <h2 class="act__title">每次试错都有价格</h2>
-      </div>
+      <div class="act"><span class="act__num">03</span><h2 class="act__title">每次试错都有价格</h2></div>
       <hr class="rule">
-      <p class="lead">这条最反直觉——<br>因为它要你放弃一个在学校里非常正确的习惯。</p>
+      <p class="lead">这条最反直觉——<br>因为它要你放弃一个在学校里<b>非常正确</b>的习惯。</p>
     </section>
 
-    <!-- 14 · 对照 3 -->
     <section class="slide" data-act="03 每次试错都有价格" data-title="试错成本对照">
       <p class="eyebrow">试错成本 · 对照</p>
       <div class="compare">
         <div class="cell">
           <span class="cell__tag">在学校</span>
           <span class="cell__val">错了重来<br>成本约等于零</span>
-          <span class="cell__note">改一版跑一版，最多几秒钟。所以「快速试」确实是最优策略。</span>
+          <span class="cell__note">改一版跑一版，最多几秒。所以「先试了再说」确实是最优策略。</span>
         </div>
         <div class="cell cell--now">
           <span class="cell__tag">在工作</span>
           <span class="cell__val">每次验证<br>都有人在等</span>
-          <span class="cell__note">要占用硬件、要等构建、要约别人配合。一天能试的次数是有限的。</span>
+          <span class="cell__note">要占硬件、等构建、约人配合。一天能试的次数是有限的。</span>
         </div>
       </div>
     </section>
 
-    <!-- 15 · 展开 3 -->
+    <section class="slide" data-act="03 每次试错都有价格" data-title="故事 · 三轮上板">
+      <p class="eyebrow">真实发生过</p>
+      <div class="story">
+        <p class="story__body">
+          为了确认一个方案行不行，流程是：改代码 → 编译 → 烧板 → 上电 → 听声音。<br>
+          <b>一轮十几分钟，而且人必须在现场。</b><br><br>
+          前面试了三种方案，两种失败。到第四种的时候我们没有直接烧——
+          先在电脑上把能查的都查了，确认「它一定会生效」，才去占那台设备。
+        </p>
+        <p class="story__punch">省下的不是那十几分钟，<br>是<em>别人等你的时间</em>。</p>
+      </div>
+    </section>
+
     <section class="slide" data-act="03 每次试错都有价格" data-title="策略为什么会失效">
       <p class="eyebrow">为什么学生时代的最优策略会失效</p>
       <div class="items">
         <div class="item"><span class="item__k">前提</span><span class="item__v">「快速试」成立的前提是试错免费<small>免费的时候，动手比思考便宜，猜一下再验证是划算的</small></span></div>
         <div class="item"><span class="item__k">变化</span><span class="item__v">这个前提在工作里不成立<small>试错开始收费之后，靠猜的期望成本会迅速超过想清楚的成本</small></span></div>
-        <div class="item"><span class="item__k">结论</span><span class="item__v">所以工程师的习惯是反过来的<small>动手前先把链路想清楚，把能提前验证的都验证掉，把真正上机的次数压到最少</small></span></div>
+        <div class="item"><span class="item__k">结论</span><span class="item__v">所以工程师的习惯是反过来的<small>先把链路想清楚，能提前验证的都验证掉，把真正上机的次数压到最少</small></span></div>
       </div>
     </section>
 
-    <!-- 16 · 落点 3 -->
+    <section class="slide" data-act="03 每次试错都有价格" data-title="便宜的验证在前">
+      <p class="eyebrow">养成一个顺序感</p>
+      <h2>把便宜的验证<br>排在贵的前面。</h2>
+      <p class="lead">同样是确认一件事，有的方式几秒钟、只花你自己的时间；
+      有的方式要占设备、要等、要别人配合。<br>
+      <b>它们的结论一样可靠，成本差一个数量级。</b><br>
+      新人和老手的区别，常常只是顺序反了。</p>
+    </section>
+
     <section class="slide" data-act="03 每次试错都有价格" data-title="落点 · 三">
       <p class="eyebrow">第三幕 · 落点</p>
       <p class="quote">不是想得太多，<br>是试错<em>真的要钱</em>。</p>
     </section>
 
-    <!-- 17 · 回顾 -->
+    <!-- ══ 回顾 ══ -->
+
     <section class="slide" data-act="收尾" data-title="三条回顾">
       <p class="eyebrow">回到这三条</p>
       <div class="recap">
@@ -623,19 +714,127 @@
           <span class="recap__p">先想清楚再动手，把上机的次数压到最少。</span>
         </div>
       </div>
-      <p class="lead">三条其实是同一件事的三个侧面：你要开始为「你看不见的那些时刻」负责。</p>
+      <p class="lead">三条其实是同一件事的三个侧面：<b>你要开始为那些你看不见的时刻负责。</b></p>
     </section>
 
-    <!-- 18 · 结尾 -->
-    <section class="slide" data-act="收尾" data-title="结尾">
-      <p class="eyebrow">最后一页</p>
+    <!-- ══ 小技巧 ══ -->
+
+    <section class="slide" data-act="附 · 生存小技巧" data-title="小技巧 · 开场">
+      <p class="eyebrow">附录</p>
+      <h1 style="font-size:clamp(2rem,6.5vw,4.6rem)">九条<br>生存小技巧</h1>
+      <p class="lead">道理讲完了，讲点马上能用的。<br>都是踩出来的，不是书上抄的。</p>
+    </section>
+
+    <section class="slide" data-act="附 · 生存小技巧" data-title="小技巧 · 上手期">
+      <p class="eyebrow">上手期 · 别把自己搞晕</p>
+      <div class="tips">
+        <div class="tip">
+          <span class="tip__n">01</span>
+          <div>
+            <h3>一次只改一个变量</h3>
+            <p>硬件调试铁律。同时改两处，出了问题你分不清是谁的锅，只能全部退回来重试一遍——等于白干两轮。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <span class="tip__n">02</span>
+          <div>
+            <h3>手上永远留一份「已知能跑」的版本</h3>
+            <p>有退路才敢往前试。没有退路的时候，人会不敢改、改了又不敢删，最后卡在一个谁也说不清的状态里。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <span class="tip__n">03</span>
+          <div>
+            <h3>把环境和步骤写下来</h3>
+            <p>烧录命令、跳线位置、上电顺序、哪个口接哪根线。当时觉得「这么简单怎么会忘」，三个月后你会重新踩一遍。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-act="附 · 生存小技巧" data-title="小技巧 · 验证期">
+      <p class="eyebrow">验证期 · 别被自己骗了</p>
+      <div class="tips">
+        <div class="tip">
+          <span class="tip__n">04</span>
+          <div>
+            <h3>先确认「改动真的进去了」，再上板</h3>
+            <p>编译通过不等于生效。花几十秒确认一下，能省掉一整轮「改了没反应」的无效验证——这是性价比最高的一个习惯。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <span class="tip__n">05</span>
+          <div>
+            <h3>日志里的数字，先搞清楚它测的是谁</h3>
+            <p>两个数字长期一模一样，往往不是巧合，是它们本来就来自同一个地方。拿它当两个独立指标看，会把你带到完全错误的方向。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <span class="tip__n">06</span>
+          <div>
+            <h3>「没搜到」不等于「没有」</h3>
+            <p>关键词搜不到，只说明你的关键词不对。用它来下「这个功能没实现」的结论，是新人最容易犯、也最容易造成误导的错。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-act="附 · 生存小技巧" data-title="小技巧 · 协作">
+      <p class="eyebrow">协作期 · 让别人帮得上你</p>
+      <div class="tips">
+        <div class="tip">
+          <span class="tip__n">07</span>
+          <div>
+            <h3>问人之前，先列「我确认了什么 / 还没确认什么」</h3>
+            <p>「这个不work，怎么办」没人接得住。「我确认了 A、B 正常，C 我没法验证」——这样问，五分钟就能有人给你方向。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <span class="tip__n">08</span>
+          <div>
+            <h3>硬件的问题，先怀疑物理层</h3>
+            <p>线松了、供电不够、接触不良、板子没上电。软件出身的人最容易跳过这一步，然后在代码里找三个小时。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <span class="tip__n">09</span>
+          <div>
+            <h3>改动范围要克制，别动公共的东西</h3>
+            <p>为了让自己的功能跑起来去改所有人共用的部分，是最快的路，也是最贵的路——你省下的半天，会变成别人排查一周。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-act="附 · 生存小技巧" data-title="一条红线">
+      <p class="eyebrow eyebrow--warn">最后 · 一条红线</p>
+      <div class="tips">
+        <div class="tip tip--warn">
+          <span class="tip__n">!</span>
+          <div>
+            <h3>烧录、擦写过程中，永远不要强行打断</h3>
+            <p>写到一半被中断，设备可能直接起不来，要用完全另一套流程才能救回来——甚至救不回来。
+            那一下省的几十秒，代价可能是半天，和一块板子。</p>
+          </div>
+        </div>
+      </div>
+      <p class="lead">这条我亲手踩过。<b>等它跑完，比什么都划算。</b></p>
+    </section>
+
+    <!-- ══ 结尾 ══ -->
+
+    <section class="slide" data-act="收尾" data-title="结尾金句">
+      <p class="eyebrow">最后</p>
       <p class="quote">学校考的是「你会不会」，<br>工作看的是<em>「你靠不靠谱」</em>。</p>
       <hr class="rule">
-      <p class="meta">
-        靠谱的定义很简单——<br>
-        你说做完了，就是真的做完了；<br>
-        你说验证过了，就是真的验证过了。
-      </p>
+      <p class="lead">技术能力会拉开差距，但那是第二年的事。<br>第一年，大家都在看同一件事：<b>交给你，放不放心。</b></p>
+    </section>
+
+    <section class="slide" data-act="收尾" data-title="靠谱的定义">
+      <p class="eyebrow">而靠谱的定义很简单</p>
+      <h2>你说做完了，<br>就是真的做完了；<br>你说验证过了，<br>就是真的验证过了。</h2>
+      <hr class="rule">
+      <p class="meta">以上。<br>祝各位入职顺利 —— 也欢迎随时来问问题。</p>
     </section>
 
   </main>
@@ -648,9 +847,7 @@
 </div>
 
 <div class="idx" id="idx" role="dialog" aria-label="目录" aria-modal="true">
-  <div class="idx__head">
-    <b>目录</b><span>ESC 返回 · 点击跳转</span>
-  </div>
+  <div class="idx__head"><b>目录</b><span>ESC 返回 · 点击跳转</span></div>
   <div class="idx__grid" id="idxGrid"></div>
 </div>
 
@@ -659,6 +856,7 @@
   var slides   = Array.prototype.slice.call(document.querySelectorAll('.slide'));
   var total    = slides.length;
   var curEl    = document.getElementById('cur');
+  var totEl    = document.getElementById('tot');
   var actEl    = document.getElementById('actLabel');
   var progress = document.getElementById('progress');
   var prevBtn  = document.getElementById('prev');
@@ -669,6 +867,8 @@
   var syncing  = false;
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  totEl.textContent = total;
 
   function render() {
     slides.forEach(function (s, i) { s.classList.toggle('is-active', i === current); });
@@ -696,24 +896,23 @@
     syncing = false;
   }
 
-  /* index */
   slides.forEach(function (s, i) {
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'idx__item';
-    b.innerHTML = '<span class="idx__n">' + pad(i + 1) + ' · ' + (s.dataset.act || '') +
-                  '</span><span class="idx__t"></span>';
+    b.innerHTML = '<span class="idx__n"></span><span class="idx__t"></span>';
+    b.querySelector('.idx__n').textContent = pad(i + 1) + ' · ' + (s.dataset.act || '');
     b.querySelector('.idx__t').textContent = s.dataset.title || '';
     b.addEventListener('click', function () { closeIdx(); go(i); });
     idxGrid.appendChild(b);
   });
 
-  function openIdx()  { idx.classList.add('is-open'); }
-  function closeIdx() { idx.classList.remove('is-open'); }
+  function openIdx()   { idx.classList.add('is-open'); }
+  function closeIdx()  { idx.classList.remove('is-open'); }
   function toggleIdx() { idx.classList.contains('is-open') ? closeIdx() : openIdx(); }
 
   /* timer */
-  var presets = [20, 30, 45, 10];
+  var presets = [30, 45, 60, 15, 20];
   var pi = 0, remain = presets[0] * 60, running = false, tid = null;
   var timerBtn = document.getElementById('timer');
   var timerTxt = document.getElementById('timerText');
@@ -754,7 +953,7 @@
   document.addEventListener('keydown', function (e) {
     if (e.metaKey || e.ctrlKey || e.altKey) { return; }
     var k = e.key;
-    if (k === 'Escape')      { e.preventDefault(); toggleIdx(); return; }
+    if (k === 'Escape') { e.preventDefault(); toggleIdx(); return; }
     if (idx.classList.contains('is-open')) { return; }
     if (k === 'ArrowRight' || k === 'PageDown' || k === ' ' || k === 'Enter') { e.preventDefault(); go(current + 1); }
     else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); go(current - 1); }
