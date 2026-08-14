@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，判断标准要换的四件事，附十二条生存小技巧。">
-<meta name="color-scheme" content="dark light">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8C%3C/text%3E%3C/svg%3E">
 <title>能跑起来，只是开始</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@300;400;500&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  /* ============ 双色制：只有墨与纸 ============
-     层次靠明暗、字体、字号、透明度，不靠强调色。
-     分隔线一律用 rgba(127,127,127,α)，深浅两种底上都成立。 */
+  /* ============ 全篇纸白 ============
+     层次靠字体、字号、透明度与极淡的底色块，不靠强调色，也不靠深底。
+     分隔线一律用 rgba(127,127,127,α)。
+     .slide.dark 的规则保留但未启用，需要个别页压深时加 class 即可。 */
   :root{
     --ink:#0a0a0b;
     --ink-rgb:10,10,11;
@@ -38,8 +39,8 @@
 
   body{
     margin:0;
-    background:var(--ink);
-    color:var(--paper);
+    background:var(--paper);
+    color:var(--ink);
     font-family:var(--sans-zh);
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
@@ -192,7 +193,7 @@
   .rule{height:1px;background:currentColor;opacity:.22;border:0;margin:0}
 
   /* ============ 幕封面：ghost 巨型数字 ============ */
-  .slide:has(.act){overflow:hidden;justify-content:center}
+  .slide:has(.act){overflow:hidden;justify-content:center;background:var(--paper-tint)}
   .act{position:relative;display:flex;flex-direction:column;gap:1.5vh}
   .act__num{
     position:absolute;
@@ -413,7 +414,7 @@
 
     <!-- ══ 开场 ══ -->
 
-    <section class="slide dark" data-act="开场" data-title="封面">
+    <section class="slide light" data-act="开场" data-title="封面">
       <p class="eyebrow">分享 · 嵌入式 2026 校招</p>
       <h1>能跑起来，<br>只是开始</h1>
       <p class="lead">从学生到工程师，判断标准要换的四件事。<br>最后附一份马上能用的生存小技巧。</p>
@@ -426,7 +427,7 @@
       <p class="lead">大概率是——跑出正确结果，交上去，这件事就结束了。<br>四年下来，这个判断标准已经变成肌肉记忆，而且它一直是对的。</p>
     </section>
 
-    <section class="slide dark" data-act="开场" data-title="这只是第一步">
+    <section class="slide light" data-act="开场" data-title="这只是第一步">
       <p class="eyebrow">而在工作里</p>
       <p class="quote">跑通，只是<em>第一步</em>。</p>
       <p class="lead">今天讲四个你入职后很快会撞上的落差。<br>不讲技术，讲的是<b>判断标准要怎么换</b>——因为技术你迟早学得会，判断标准没人会专门教你。</p>
@@ -445,7 +446,7 @@
 
     <!-- ══ 第一幕 ══ -->
 
-    <section class="slide dark" data-act="01 跑通只是入场券" data-title="第一幕">
+    <section class="slide light" data-act="01 跑通只是入场券" data-title="第一幕">
       <div class="act"><span class="act__num">01</span><h2 class="act__title">跑通只是入场券</h2></div>
       <hr class="rule">
       <p class="lead">学校里，跑通是终点线。<br>工作里，跑通是起跑线。</p>
@@ -535,14 +536,14 @@
       把 L1 说成「做完了」，是把风险转移给了信你的人。</p>
     </section>
 
-    <section class="slide dark" data-act="01 跑通只是入场券" data-title="落点 · 一">
+    <section class="slide light" data-act="01 跑通只是入场券" data-title="落点 · 一">
       <p class="eyebrow">第一幕 · 落点</p>
       <p class="quote">你交付的不是<br>「这次能跑」，<br>是<em>「以后也能跑」</em>。</p>
     </section>
 
     <!-- ══ 第二幕 ══ -->
 
-    <section class="slide dark" data-act="02 代码要活很多年" data-title="第二幕">
+    <section class="slide light" data-act="02 代码要活很多年" data-title="第二幕">
       <div class="act"><span class="act__num">02</span><h2 class="act__title">代码要活很多年</h2></div>
       <hr class="rule">
       <p class="lead">作业的生命周期是一个学期。<br>产品代码的生命周期，通常比你在这家公司待的时间还长。</p>
@@ -640,14 +641,14 @@
       <p class="lead">尤其是第三样。<b>「这里为什么不用更直接的写法」——写一行注释，能省下别人半天。</b></p>
     </section>
 
-    <section class="slide dark" data-act="02 代码要活很多年" data-title="落点 · 二">
+    <section class="slide light" data-act="02 代码要活很多年" data-title="落点 · 二">
       <p class="eyebrow">第二幕 · 落点</p>
       <p class="quote">你是在<br>为下一个人写。<br><em>也包括三个月后的你自己。</em></p>
     </section>
 
     <!-- ══ 第三幕 ══ -->
 
-    <section class="slide dark" data-act="03 每次试错都有价格" data-title="第三幕">
+    <section class="slide light" data-act="03 每次试错都有价格" data-title="第三幕">
       <div class="act"><span class="act__num">03</span><h2 class="act__title">每次试错都有价格</h2></div>
       <hr class="rule">
       <p class="lead">这条最反直觉——<br>因为它要你放弃一个在学校里<b>非常正确</b>的习惯。</p>
@@ -737,14 +738,14 @@
       前者可能查一周，后者通常半天。</p>
     </section>
 
-    <section class="slide dark" data-act="03 每次试错都有价格" data-title="落点 · 三">
+    <section class="slide light" data-act="03 每次试错都有价格" data-title="落点 · 三">
       <p class="eyebrow">第三幕 · 落点</p>
       <p class="quote">不是想得太多，<br>是试错<em>真的要钱</em>。</p>
     </section>
 
     <!-- ══ 第四幕 ══ -->
 
-    <section class="slide dark" data-act="04 结论要站得住" data-title="第四幕">
+    <section class="slide light" data-act="04 结论要站得住" data-title="第四幕">
       <div class="act"><span class="act__num">04</span><h2 class="act__title">结论要站得住</h2></div>
       <hr class="rule">
       <p class="lead">前三条讲的是怎么做事。<br>这一条讲的是怎么说话——<b>而说话，往往比做事影响更大。</b></p>
@@ -822,7 +823,7 @@
       前提是你把它写下来了——只在脑子里的排查，等于没发生。</p>
     </section>
 
-    <section class="slide dark" data-act="04 结论要站得住" data-title="落点 · 四">
+    <section class="slide light" data-act="04 结论要站得住" data-title="落点 · 四">
       <p class="eyebrow">第四幕 · 落点</p>
       <p class="quote">说「不确定」不丢人。<br>把不确定的事<br><em>说成确定的，才丢人</em>。</p>
     </section>
@@ -859,7 +860,7 @@
 
     <!-- ══ 小技巧 ══ -->
 
-    <section class="slide dark" data-act="附 · 生存小技巧" data-title="小技巧 · 开场">
+    <section class="slide light" data-act="附 · 生存小技巧" data-title="小技巧 · 开场">
       <p class="eyebrow">附录</p>
       <h1 style="font-size:clamp(2rem,6.5vw,4.6rem)">十二条<br>生存小技巧</h1>
       <p class="lead">道理讲完了，讲点马上能用的。<br>都是踩出来的，不是书上抄的。</p>
@@ -973,7 +974,7 @@
       </div>
     </section>
 
-    <section class="slide dark" data-act="附 · 生存小技巧" data-title="一条红线">
+    <section class="slide light" data-act="附 · 生存小技巧" data-title="一条红线">
       <p class="eyebrow eyebrow--warn">最后 · 一条红线</p>
       <div class="tips">
         <div class="tip tip--warn">
@@ -990,14 +991,14 @@
 
     <!-- ══ 结尾 ══ -->
 
-    <section class="slide dark" data-act="收尾" data-title="结尾金句">
+    <section class="slide light" data-act="收尾" data-title="结尾金句">
       <p class="eyebrow">最后</p>
       <p class="quote">学校考的是「你会不会」，<br>工作看的是<em>「你靠不靠谱」</em>。</p>
       <hr class="rule">
       <p class="lead">技术能力会拉开差距，但那是第二年的事。<br>第一年，大家都在看同一件事：<b>交给你，放不放心。</b></p>
     </section>
 
-    <section class="slide dark" data-act="收尾" data-title="靠谱的定义">
+    <section class="slide light" data-act="收尾" data-title="靠谱的定义">
       <p class="eyebrow">而靠谱的定义很简单</p>
       <h2>你说做完了，<br>就是真的做完了；<br>你说验证过了，<br>就是真的验证过了。</h2>
       <hr class="rule">
