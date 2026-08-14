@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，判断标准要换的五件事，附十二条生存小技巧。">
+<meta name="description" content="面向嵌入式 2026 校招的分享：从学生到工程师，判断标准要换的三件事，附六条生存小技巧。">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%8C%3C/text%3E%3C/svg%3E">
 <title>能跑起来，只是开始</title>
@@ -306,7 +306,7 @@
   .tip--warn{padding-left:1.4rem;padding-right:1.4rem}
 
   /* ============ Recap ============ */
-  .recap{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+  .recap{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
   .recap__col{
     padding:clamp(1rem,2.6vh,2rem) clamp(.9rem,1.6vw,1.6rem);
     display:flex;flex-direction:column;gap:.9rem;
@@ -438,7 +438,7 @@
     <span class="rail__spacer"></span>
     <span class="rail__act" id="actLabel">开场</span>
     <button class="timer" id="timer" type="button" title="点击开始 / 暂停，长按切换时长">
-      <span class="timer__dot"></span><span id="timerText">30:00</span>
+      <span class="timer__dot"></span><span id="timerText">10:00</span>
     </button>
     <span class="rail__count"><span id="cur">01</span><i>/<span id="tot">28</span></i></span>
   </header>
@@ -446,86 +446,26 @@
   <main class="stage" id="stage">
     <div id="deck">
 
-    <!-- ══ 开场 ══ -->
-
-    <section class="slide light" data-act="开场" data-title="封面">
+<section class="slide light" data-act="开场" data-title="封面">
       <p class="eyebrow">分享 · 嵌入式 2026 校招</p>
       <h1>能跑起来，<br>只是开始</h1>
-      <p class="lead">从学生到工程师，判断标准要换的五件事。<br>最后附一份马上能用的生存小技巧。</p>
+      <p class="lead">从学生到工程师，判断标准要换的三件事。<br>最后附一份马上能用的生存小技巧。</p>
       <p class="hint">→ 方向键翻页 · ESC 目录</p>
     </section>
 
-    <section class="slide light" data-act="开场" data-title="先问一个问题">
-      <p class="eyebrow">先问一个问题</p>
-      <h2>你写完一份作业，<br>什么时候算「做完了」？</h2>
-      <p class="lead">大概率是——跑出正确结果，交上去，这件事就结束了。<br>四年下来，这个判断标准已经变成肌肉记忆，而且它一直是对的。</p>
-    </section>
-
-    <section class="slide light" data-act="开场" data-title="这只是第一步">
+<section class="slide light" data-act="开场" data-title="这只是第一步">
       <p class="eyebrow">而在工作里</p>
       <p class="quote">跑通，只是<em>第一步</em>。</p>
-      <p class="lead">今天讲五个你入职后很快会撞上的落差。<br>不讲技术，讲的是<b>判断标准要怎么换</b>——因为技术你迟早学得会，判断标准没人会专门教你。</p>
+      <p class="lead">今天讲三个你入职后很快会撞上的落差。<br>不讲技术，讲的是<b>判断标准要怎么换</b>——因为技术你迟早学得会，判断标准没人会专门教你。</p>
     </section>
 
-    <section class="slide light" data-act="开场" data-title="本次内容">
-      <p class="eyebrow">本次内容</p>
-      <div class="items">
-        <div class="item"><span class="item__k">01</span><span class="item__v">跑通只是入场券<small>「做完」的标准，比你以为的高一层</small></span></div>
-        <div class="item"><span class="item__k">02</span><span class="item__v">代码要活很多年<small>你不是唯一的读者，也不是最后一个</small></span></div>
-        <div class="item"><span class="item__k">03</span><span class="item__v">每次试错都有价格<small>学生时代的最优策略，在这里会失效</small></span></div>
-        <div class="item"><span class="item__k">04</span><span class="item__v">结论要站得住<small>你说的话，别人会拿去做决定</small></span></div>
-        <div class="item"><span class="item__k">05</span><span class="item__v">AI 替不了判断<small>它让「能跑」变得不要钱，于是标准整个上移</small></span></div>
-        <div class="item"><span class="item__k">附</span><span class="item__v">嵌入式生存小技巧<small>十二条，入职第一周就用得上</small></span></div>
-      </div>
-    </section>
-
-    <!-- ══ 第一幕 ══ -->
-
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="第一幕">
+<section class="slide light" data-act="01 跑通只是入场券" data-title="第一幕">
       <div class="act"><span class="act__num">01</span><h2 class="act__title">跑通只是入场券</h2></div>
       <hr class="rule">
       <p class="lead">学校里，跑通是终点线。<br>工作里，跑通是起跑线。</p>
     </section>
 
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="判断标准对照">
-      <p class="eyebrow">判断标准 · 对照</p>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">在学校</span>
-          <span class="cell__val">跑通 ＝ 做完了</span>
-          <span class="cell__note">验收的人只看结果对不对。交上去之后，不会再有人打开它。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">在工作</span>
-          <span class="cell__val">跑通 ＝ 拿到入场券</span>
-          <span class="cell__note">结果对，只说明你可以开始接受检验了。真正的问题都在后面。</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="故事 · 安静的失败">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          我改了一处配置，<b>编译通过，链接通过，一条警告都没有</b>，烧进板子——<br>
-          行为跟没改一样。<br><br>
-          不是代码写错了，是那处配置放在了错误的位置，<b>从头到尾没有生效</b>。
-          整个流程里没有任何一个环节报错，它只是安安静静地、完完整整地，什么都没做。
-        </p>
-        <p class="story__punch">没报错，<em>不代表做成了</em>。</p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="跑通之后的三个问题">
-      <p class="eyebrow">跑通之后，才开始问的三件事</p>
-      <div class="items">
-        <div class="item"><span class="item__k">Q1</span><span class="item__v">换一个场景，还成立吗？<small>换块板子、换个网络、换个用户的用法——你验证过的那条路，是不是唯一的那条路</small></span></div>
-        <div class="item"><span class="item__k">Q2</span><span class="item__v">别人接手，看得懂吗？<small>你不在的时候，这段代码只能靠它自己解释自己</small></span></div>
-        <div class="item"><span class="item__k">Q3</span><span class="item__v">三个月后出问题，定位得到吗？<small>现场只会甩给你一段日志。那段日志里有没有你需要的东西，是你今天决定的</small></span></div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="故事 · 碰运气的成功率">
+<section class="slide light" data-act="01 跑通只是入场券" data-title="故事 · 碰运气的成功率">
       <p class="eyebrow">真实发生过</p>
       <div class="story">
         <p class="story__body">
@@ -539,27 +479,7 @@
       </div>
     </section>
 
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="偶尔能跑 = 还没做完">
-      <p class="eyebrow">一个要记住的判断</p>
-      <h2>「偶尔失败」不是小问题，<br>是「还没定位到原因」<br>的另一种说法。</h2>
-      <p class="lead">十次里错一次，和十次全错，本质是同一件事——<b>你并不知道它为什么会成。</b><br>
-      区别只是前者更容易被放过去。而放过去之后，它会在演示那天、在客户现场，替你选一个更糟的时间点出现。</p>
-    </section>
-
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="故事 · 空桩返回成功">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          调一个网络功能，怎么都拿不到正确的地址。翻到最底层才发现，
-          那个函数<b>确实存在、确实被调用、确实返回成功</b>——函数体是一行 <code>return 0</code>。<br><br>
-          它是很久以前留下的占位实现。有人为了让编译通过先放了个空壳，返回值填了「成功」。<br><br>
-          顺手还发现旁边一个：正确拼写的那个函数是空的，<b>拼错名字的那个才有真实现</b>。
-        </p>
-        <p class="story__punch">没实现就明说没实现。<br><em>假装成功，比直接报错危险得多。</em></p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="做完了的四个层级">
+<section class="slide light" data-act="01 跑通只是入场券" data-title="做完了的四个层级">
       <p class="eyebrow">下次说「做完了」之前，先问自己在第几级</p>
 
       <div class="figure">
@@ -607,175 +527,21 @@
         </svg>
       </div>
       <p class="lead">停在哪一级都可以，<b>但你要说清楚停在哪一级</b>。<br>
-      把 L1 说成「做完了」，是把风险转移给了信你的人。</p>
+      把 L1 说成「做完了」，等于把坑留给信你的人。</p>
     </section>
 
-    <section class="slide light" data-act="01 跑通只是入场券" data-title="落点 · 一">
+<section class="slide light" data-act="01 跑通只是入场券" data-title="落点 · 一">
       <p class="eyebrow">第一幕 · 落点</p>
       <p class="quote">你交付的不是<br>「这次能跑」，<br>是<em>「以后也能跑」</em>。</p>
     </section>
 
-    <!-- ══ 第二幕 ══ -->
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="第二幕">
-      <div class="act"><span class="act__num">02</span><h2 class="act__title">代码要活很多年</h2></div>
-      <hr class="rule">
-      <p class="lead">作业的生命周期是一个学期。<br>产品代码的生命周期，通常比你在这家公司待的时间还长。</p>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="生命周期对照">
-      <p class="eyebrow">生命周期 · 对照</p>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">在学校</span>
-          <span class="cell__val">写完就扔<br>读者只有你一个</span>
-          <span class="cell__note">怎么写都行，下学期就忘了，也没人会来问你为什么这么写。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">在工作</span>
-          <span class="cell__val">活好几年<br>读者是一整个团队</span>
-          <span class="cell__note">会被人读、被人改、被抄去别的模块。你写下的每个决定都会被继承。</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="故事 · 没人敢删的代码">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          接手一份别人的代码，里面有一段做性能优化的逻辑。看着挺重要，<b>谁都不敢动</b>。<br><br>
-          查到最后才发现：因为一个参数始终对不上，这段代码<b>从写下的那天起，一次都没有真正执行过</b>。<br><br>
-          它在代码库里躺了很久。每个读到的人都以为它有用，每个想改附近代码的人都绕着它走。
-        </p>
-        <p class="story__punch">你留下的每一段代码<br>都在替你说话——<br><em>哪怕它什么都没做。</em></p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="临时补丁的代价">
-      <p class="eyebrow">「先跑通，回头再改」的代价</p>
-      <div class="items">
-        <div class="item"><span class="item__k">一</span><span class="item__v">那个「回头」，通常不会到来<small>需求永远排着队，没有人会专门给你留一段时间回去还债</small></span></div>
-        <div class="item"><span class="item__k">二</span><span class="item__v">临时方案会被当成范例<small>下一个人打开代码，默认你这么写是有道理的，然后照着抄一遍</small></span></div>
-        <div class="item"><span class="item__k">三</span><span class="item__v">最后变成谁都绕不开的坑<small>等到想改的时候，已经有五个地方依赖它了</small></span></div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="故事 · 为自己方便改公共代码">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          接一块新板子，按约定只该改两个地方：这块板自己的目录、这颗芯片自己的目录。<br>
-          但实际的改动散落到了公共代码里——因为<b>那样最快</b>：哪里编不过就在哪里改一下。<br><br>
-          于是公共代码里出现了「如果是这块板，就走另一条路」的分支。
-          它对这块板有效，对其他所有板子是<b>纯粹的噪音</b>：读的人要问一句这是干嘛的，
-          改的人要考虑会不会影响它。
-        </p>
-        <p class="story__punch">在公共代码里写「只为我这块板」，<br>是把<em>你的特殊情况，变成所有人的负担</em>。</p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="边界在哪儿">
-      <p class="eyebrow">怎么判断自己越界了</p>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">越界的写法</span>
-          <span class="cell__val">在大家共用的地方<br>加一句「我除外」</span>
-          <span class="cell__note">当下最省事。代价是每个后来的人都要绕过你留下的这句，而且没人敢删。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">收敛的写法</span>
-          <span class="cell__val">把特殊逻辑<br>收回自己的地盘</span>
-          <span class="cell__note">多花半天想怎么放。换来的是公共部分保持干净，别人完全不需要知道你的存在。</span>
-        </div>
-      </div>
-      <p class="lead">判断方法很简单：<b>你的改动，会不会让一个跟你无关的人多问一个问题？</b></p>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="故事 · 依赖会传染">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          一个跟具体硬件毫无关系的通用网络模块，构建配置里却挂着<b>八个某颗芯片私有的目录</b>，
-          其中一个是驱动的私有目录——看起来八竿子打不着。<br><br>
-          查下去才明白：网络库引了一个头文件，那个头文件引了串口的头文件，串口的头文件又在那个私有目录里。
-          <b>一层引一层，最后全都得挂上。</b><br><br>
-          后果是这个「通用」模块，只能在这一颗芯片上编译。
-        </p>
-        <p class="story__punch">依赖是会传染的。<br><em>「就加一个路径」，从来不只是一个路径。</em></p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="留给下一个人的三样东西">
-      <p class="eyebrow">如果只能留三样</p>
-      <div class="items">
-        <div class="item"><span class="item__k">一</span><span class="item__v">一个能跑的基线<small>让下一个人有退路可退。他遇到问题时的第一个动作，一定是「先回到能跑的状态」</small></span></div>
-        <div class="item"><span class="item__k">二</span><span class="item__v">写下来的环境与步骤<small>怎么编、怎么烧、怎么跑起来。这部分知识只在你脑子里的时候，它就是团队的风险</small></span></div>
-        <div class="item"><span class="item__k">三</span><span class="item__v">解释「为什么」的注释<small>代码本身能说清做了什么，说不清为什么这么做。而后者才是别人不敢动它的原因</small></span></div>
-      </div>
-      <p class="lead">尤其是第三样。<b>「这里为什么不用更直接的写法」——写一行注释，能省下别人半天。</b></p>
-    </section>
-
-    <section class="slide light" data-act="02 代码要活很多年" data-title="落点 · 二">
-      <p class="eyebrow">第二幕 · 落点</p>
-      <p class="quote">你是在<br>为下一个人写。<br><em>也包括三个月后的你自己。</em></p>
-    </section>
-
-    <!-- ══ 第三幕 ══ -->
-
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="第三幕">
-      <div class="act"><span class="act__num">03</span><h2 class="act__title">每次试错都有价格</h2></div>
+<section class="slide light" data-act="02 每次试错都有价格" data-title="第二幕">
+      <div class="act"><span class="act__num">02</span><h2 class="act__title">每次试错都有价格</h2></div>
       <hr class="rule">
       <p class="lead">这条最反直觉——<br>因为它要你放弃一个在学校里<b>非常正确</b>的习惯。</p>
     </section>
 
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="试错成本对照">
-      <p class="eyebrow">试错成本 · 对照</p>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">在学校</span>
-          <span class="cell__val">错了重来<br>成本约等于零</span>
-          <span class="cell__note">改一版跑一版，最多几秒。所以「先试了再说」确实是最优策略。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">在工作</span>
-          <span class="cell__val">每次验证<br>都有人在等</span>
-          <span class="cell__note">要占硬件、等构建、约人配合。一天能试的次数是有限的。</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="故事 · 三轮上板">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          为了确认一个方案行不行，流程是：改代码 → 编译 → 烧板 → 上电 → 听声音。<br>
-          <b>一轮十几分钟，而且人必须在现场。</b><br><br>
-          前面试了三种方案，两种失败。到第四种的时候我们没有直接烧——
-          先在电脑上把能查的都查了，确认「它一定会生效」，才去占那台设备。
-        </p>
-        <p class="story__punch">省下的不是那十几分钟，<br>是<em>别人等你的时间</em>。</p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="策略为什么会失效">
-      <p class="eyebrow">为什么学生时代的最优策略会失效</p>
-      <div class="items">
-        <div class="item"><span class="item__k">前提</span><span class="item__v">「快速试」成立的前提是试错免费<small>免费的时候，动手比思考便宜，猜一下再验证是划算的</small></span></div>
-        <div class="item"><span class="item__k">变化</span><span class="item__v">这个前提在工作里不成立<small>试错开始收费之后，靠猜的期望成本会迅速超过想清楚的成本</small></span></div>
-        <div class="item"><span class="item__k">结论</span><span class="item__v">所以工程师的习惯是反过来的<small>先把链路想清楚，能提前验证的都验证掉，把真正上机的次数压到最少</small></span></div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="便宜的验证在前">
-      <p class="eyebrow">养成一个顺序感</p>
-      <h2>把便宜的验证<br>排在贵的前面。</h2>
-      <p class="lead">同样是确认一件事，有的方式几秒钟、只花你自己的时间；
-      有的方式要占设备、要等、要别人配合。<br>
-      <b>它们的结论一样可靠，成本差一个数量级。</b><br>
-      新人和老手的区别，常常只是顺序反了。</p>
-    </section>
-
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="验证的价目表">
+<section class="slide light" data-act="02 每次试错都有价格" data-title="验证的价目表">
       <p class="eyebrow">同一个结论，四种价格</p>
 
       <div class="figure">
@@ -810,11 +576,11 @@
           <text class="fig-t fig-brick" x="1076" y="420" text-anchor="end" font-size="19" font-weight="600">越往右越贵</text>
         </svg>
       </div>
-      <p class="lead">新人常见的失误不是不会验证，是<b>一上来就用最贵的那种</b>。<br>
-      养成习惯：动手之前先问一句「这件事有没有更便宜的确认方式」。</p>
+      <p class="lead">新人不是不会验证，是<b>一上来就用最贵的那种</b>。<br>
+      动手之前先问自己一句：这事有没有更便宜的确认方式。</p>
     </section>
 
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="故事 · 找一个好的来对照">
+<section class="slide light" data-act="02 每次试错都有价格" data-title="故事 · 找一个好的来对照">
       <p class="eyebrow">真实发生过</p>
       <div class="story">
         <p class="story__body">
@@ -828,116 +594,18 @@
       </div>
     </section>
 
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="对照法的三种用法">
-      <p class="eyebrow">这个思路可以用在很多地方</p>
-      <div class="items">
-        <div class="item"><span class="item__k">版本</span><span class="item__v">好的版本 vs 坏的版本<small>升级后出问题时的首选。不用理解全部改动，只要定位到「从哪一版开始变的」</small></span></div>
-        <div class="item"><span class="item__k">实现</span><span class="item__v">成熟的实现 vs 自己的实现<small>同样的硬件、同样的功能，人家跑得好你跑不好，差异就是答案所在</small></span></div>
-        <div class="item"><span class="item__k">环境</span><span class="item__v">能跑的机器 vs 不能跑的机器<small>同一份代码换台机器就不行，那问题多半不在代码里</small></span></div>
-      </div>
-      <p class="lead">共同点是：<b>把「无边界的排查」变成「有限的差异比对」。</b><br>
-      前者可能查一周，后者通常半天。</p>
-    </section>
-
-    <section class="slide light" data-act="03 每次试错都有价格" data-title="落点 · 三">
-      <p class="eyebrow">第三幕 · 落点</p>
+<section class="slide light" data-act="02 每次试错都有价格" data-title="落点 · 二">
+      <p class="eyebrow">第二幕 · 落点</p>
       <p class="quote">不是想得太多，<br>是试错<em>真的要钱</em>。</p>
     </section>
 
-    <!-- ══ 第四幕 ══ -->
-
-    <section class="slide light" data-act="04 结论要站得住" data-title="第四幕">
-      <div class="act"><span class="act__num">04</span><h2 class="act__title">结论要站得住</h2></div>
+<section class="slide light" data-act="03 AI 替不了判断" data-title="第三幕">
+      <div class="act"><span class="act__num">03</span><h2 class="act__title">AI 替不了判断</h2></div>
       <hr class="rule">
-      <p class="lead">前三条讲的是怎么做事。<br>这一条讲的是怎么说话——<b>而说话，往往比做事影响更大。</b></p>
+      <p class="lead">前面两条，在 AI 出现之前就成立。<br>这一条要说的是：<b>AI 让它们更成立了。</b></p>
     </section>
 
-    <section class="slide light" data-act="04 结论要站得住" data-title="你的话会被拿去做决定">
-      <p class="eyebrow">一个你可能没意识到的变化</p>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">在学校</span>
-          <span class="cell__val">你的结论<br>只影响你的分数</span>
-          <span class="cell__note">说错了，扣的是自己的分。没有别人会基于你的判断去安排他的工作。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">在工作</span>
-          <span class="cell__val">你的结论<br>会变成别人的行动</span>
-          <span class="cell__note">你说「这块没问题」，测试就不测了，别人就往下接了。错的结论会被放大很多倍。</span>
-        </div>
-      </div>
-      <p class="lead">所以工作里有个很重要、但没人明说的能力：<b>准确地表达你的把握程度。</b></p>
-    </section>
-
-    <section class="slide light" data-act="04 结论要站得住" data-title="三种说法要分清">
-      <p class="eyebrow">同一件事，三种不同的话</p>
-      <div class="items">
-        <div class="item"><span class="item__k">A</span><span class="item__v">「我验证过，是这样」<small>你亲手跑过、看到过现象。别人可以直接采信</small></span></div>
-        <div class="item"><span class="item__k">B</span><span class="item__v">「从代码看应该是这样，但我没实测」<small>有依据的推断。别人知道这里还有风险，会自己补一刀</small></span></div>
-        <div class="item"><span class="item__k">C</span><span class="item__v">「我猜是这样」<small>直觉。说出来没关系，标清楚就行</small></span></div>
-      </div>
-      <p class="lead">三种话都可以说。<b>出事的从来不是「猜」，是把 C 说成了 A。</b><br>
-      新人最容易犯的正是这个——因为说「我不确定」感觉很没底气，其实恰恰相反。</p>
-    </section>
-
-    <section class="slide light" data-act="04 结论要站得住" data-title="故事 · 推翻自己">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          排查一个偶发故障，跑了一轮测试，得出结论：<b>是某个功能开着导致的。</b><br><br>
-          第二轮换个条件再测，数据完全不支持上一轮的结论——<b>那个功能开着的时候，问题反而基本没出现。</b><br><br>
-          这时候有两条路：装作没看见，或者主动说一句「我上一轮的结论不成立，重讲」。
-        </p>
-        <p class="story__punch">主动推翻自己，<br><em>不丢人，而且只会越拖越贵。</em></p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="04 结论要站得住" data-title="故事 · 交付一份做不到">
-      <p class="eyebrow">真实发生过</p>
-      <div class="story">
-        <p class="story__body">
-          调一个摄像头，画面颜色不对。为了修它，前后试了六种办法：改配置、加内存、应用层重试、
-          重启相关服务、把驱动卸载再加载、调电源——<b>全部无效。</b><br><br>
-          最后定位到原因在更底层的驱动里，超出了当时能改的范围。
-          这个问题<b>没有修好</b>。<br><br>
-          于是交出去的东西是：一份写清楚「试过哪六种、每种为什么不行、根因在哪、下一步该找谁」的记录。
-        </p>
-        <p class="story__punch">做不到的时候，<br><em>交付一份高质量的「做不到」。</em></p>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="04 结论要站得住" data-title="做不到怎么说">
-      <p class="eyebrow">「没搞定」有两种说法</p>
-      <div class="compare">
-        <div class="cell">
-          <span class="cell__tag">低质量</span>
-          <span class="cell__val">「这个搞不定，<br>太难了」</span>
-          <span class="cell__note">接手的人只能从零开始，你花的时间对团队等于零。而且没人知道该不该继续投入。</span>
-        </div>
-        <div class="cell cell--now">
-          <span class="cell__tag">高质量</span>
-          <span class="cell__val">「试了 ABCDEF，<br>分别卡在这几点」</span>
-          <span class="cell__note">排除掉的路径就是成果。下一个人从你停下的地方接着走，还知道要找谁要什么资源。</span>
-        </div>
-      </div>
-      <p class="lead"><b>排查过程本身就是产出</b>，哪怕结论是「暂时做不到」。<br>
-      前提是你把它写下来了——只在脑子里的排查，等于没发生。</p>
-    </section>
-
-    <section class="slide light" data-act="04 结论要站得住" data-title="落点 · 四">
-      <p class="eyebrow">第四幕 · 落点</p>
-      <p class="quote">说「不确定」不丢人。<br>把不确定的事<br><em>说成确定的，才丢人</em>。</p>
-    </section>
-
-    <!-- ══ 第五幕 ══ -->
-
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="第五幕">
-      <div class="act"><span class="act__num">05</span><h2 class="act__title">AI 替不了判断</h2></div>
-      <hr class="rule">
-      <p class="lead">前面四条，在 AI 出现之前就成立。<br>这一条要说的是：<b>AI 让它们更成立了。</b></p>
-    </section>
-
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="分界线">
+<section class="slide light" data-act="03 AI 替不了判断" data-title="分界线">
       <p class="eyebrow">先划一条线</p>
       <h2>AI 的语料里，<br>有没有你这块板子？</h2>
       <div class="figure">
@@ -974,7 +642,7 @@
       <p class="lead">判断方法很简单：<b>这个知识，在网上查得到吗？</b>查不到的，只能靠你。</p>
     </section>
 
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="故事 · 一个引脚的极性">
+<section class="slide light" data-act="03 AI 替不了判断" data-title="故事 · 一个引脚的极性">
       <p class="eyebrow">真实发生过</p>
       <div class="story">
         <p class="story__body">
@@ -987,16 +655,7 @@
       </div>
     </section>
 
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="能跑变得不要钱">
-      <p class="eyebrow">真正被改变的是什么</p>
-      <h2>以前「能跑起来」还算个门槛。<br>现在十分钟就有一份能跑的。</h2>
-      <p class="lead">产出变便宜之后，<b>检验就成了瓶颈</b>。<br>
-      回放时好时坏、画面底部发糊、延时十秒、对讲断断续续——
-      这些没有一个是编译器拦得住的，全是人在板子前面看出来的。<br>
-      <b>谁能判断「这份代码能不能交付」，谁的价值就在涨。</b></p>
-    </section>
-
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="一个值得知道的实验">
+<section class="slide light" data-act="03 AI 替不了判断" data-title="一个值得知道的实验">
       <p class="eyebrow">这条不是我的经验，是别人做的实验</p>
 
       <div class="figure">
@@ -1029,7 +688,7 @@
       但它戳中的那件事很硬：<b>你对「到底快没快」的感觉，本身就不可靠。</b></p>
     </section>
 
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="必须留在手上的三样">
+<section class="slide light" data-act="03 AI 替不了判断" data-title="必须留在手上的三样">
       <p class="eyebrow">不要外包出去的三样</p>
 
       <div class="figure">
@@ -1069,25 +728,13 @@
       </div>
     </section>
 
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="怎么练">
-      <p class="eyebrow">具体可以怎么练</p>
-      <div class="items">
-        <div class="item"><span class="item__k">01</span><span class="item__v">让它写，但你要说得出它为什么这么写<small>说不上来的地方，就是你欠的债。这比自己吭哧写一遍效率高，前提是你真的去追问</small></span></div>
-        <div class="item"><span class="item__k">02</span><span class="item__v">新领域，先自己写一遍再让它 review<small>反过来（它写你看）很容易产生「我看懂了」的错觉</small></span></div>
-        <div class="item"><span class="item__k">03</span><span class="item__v">主动保留没有 AI 的场景<small>看波形、量电平、读手册里的时序图。这些是纯手感，练一次是一次</small></span></div>
-        <div class="item"><span class="item__k">04</span><span class="item__v">把踩过的坑写下来<small>你写下的那些别处查不到的东西，就是你自己的语料。AI 没有，别人也没有</small></span></div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="05 AI 替不了判断" data-title="落点 · 五">
-      <p class="eyebrow">第五幕 · 落点</p>
+<section class="slide light" data-act="03 AI 替不了判断" data-title="落点 · 三">
+      <p class="eyebrow">第三幕 · 落点</p>
       <p class="quote">AI 让「能跑」<br>变得不要钱。<br><em>标准整个上移了。</em></p>
     </section>
 
-    <!-- ══ 回顾 ══ -->
-
-    <section class="slide light" data-act="回顾" data-title="五条回顾">
-      <p class="eyebrow">回到这五条</p>
+<section class="slide light" data-act="回顾" data-title="三条回顾">
+      <p class="eyebrow">回到这三条</p>
       <div class="recap">
         <div class="recap__col">
           <span class="recap__n">01</span>
@@ -1096,146 +743,38 @@
         </div>
         <div class="recap__col">
           <span class="recap__n">02</span>
-          <span class="recap__h">代码要活很多年</span>
-          <span class="recap__p">为下一个人写，也包括三个月后的你自己。</span>
+          <span class="recap__h">每次试错都有价格</span>
+          <span class="recap__p">便宜的验证排在贵的前面，上机次数压到最少。</span>
         </div>
         <div class="recap__col">
           <span class="recap__n">03</span>
-          <span class="recap__h">每次试错都有价格</span>
-          <span class="recap__p">先想清楚再动手，把上机的次数压到最少。</span>
-        </div>
-        <div class="recap__col">
-          <span class="recap__n">04</span>
-          <span class="recap__h">结论要站得住</span>
-          <span class="recap__p">分清验证过的和猜的，做不到也说清楚。</span>
-        </div>
-        <div class="recap__col">
-          <span class="recap__n">05</span>
           <span class="recap__h">AI 替不了判断</span>
-          <span class="recap__p">产出变便宜，检验就成了瓶颈。</span>
+          <span class="recap__p">代码变便宜了，验代码反倒成了最贵的一步。</span>
         </div>
       </div>
-      <p class="lead">五条其实是同一件事的五个侧面：<b>你要开始为那些你看不见的时刻负责。</b><br>
-      为你不在场时它还能不能跑，为下一个打开这份代码的人，为信了你那句话的人。</p>
+      <p class="lead">说白了是一件事：<b>你得为你看不见的那些时刻负责。</b><br>
+      你不在的时候它还跑不跑得起来，三个月后出问题查不查得到，信了你那句「没问题」的人会不会被坑。</p>
     </section>
 
-    <!-- ══ 小技巧 ══ -->
-
-    <section class="slide light" data-act="附 · 生存小技巧" data-title="小技巧 · 开场">
-      <p class="eyebrow">附录</p>
-      <h1 style="font-size:clamp(2rem,6.5vw,4.6rem)">十二条<br>生存小技巧</h1>
-      <p class="lead">道理讲完了，讲点马上能用的。<br>都是踩出来的，不是书上抄的。</p>
-    </section>
-
-    <section class="slide light" data-act="附 · 生存小技巧" data-title="小技巧 · 上手期">
-      <p class="eyebrow">上手期 · 别把自己搞晕</p>
+    <section class="slide light" data-act="收尾" data-title="生存小技巧速览">
+      <p class="eyebrow">最后 · 六条马上能用的</p>
       <div class="tips">
-        <div class="tip">
-          <span class="tip__n">01</span>
-          <div>
-            <h3>一次只改一个变量</h3>
-            <p>硬件调试铁律。同时改两处，出了问题你分不清是谁的锅，只能全部退回来重试一遍——等于白干两轮。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">02</span>
-          <div>
-            <h3>手上永远留一份「已知能跑」的版本</h3>
-            <p>有退路才敢往前试。没有退路的时候，人会不敢改、改了又不敢删，最后卡在一个谁也说不清的状态里。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">03</span>
-          <div>
-            <h3>把环境和步骤写下来</h3>
-            <p>烧录命令、跳线位置、上电顺序、哪个口接哪根线。当时觉得「这么简单怎么会忘」，三个月后你会重新踩一遍。</p>
-          </div>
-        </div>
+        <div class="tip"><span class="tip__n">01</span><div><h3>一次只改一个变量</h3>
+          <p>同时改两处，出了问题分不清是谁的锅，只能全退回来重试一遍。</p></div></div>
+        <div class="tip"><span class="tip__n">02</span><div><h3>手上永远留一份「已知能跑」的版本</h3>
+          <p>有退路才敢往前试。没退路的人会不敢改，最后卡在谁也说不清的状态里。</p></div></div>
+        <div class="tip"><span class="tip__n">03</span><div><h3>先确认「改动真的进去了」，再上板</h3>
+          <p>编译通过不等于生效。花几十秒确认一下，省掉一整轮「改了没反应」。</p></div></div>
+        <div class="tip"><span class="tip__n">04</span><div><h3>「没搜到」不等于「没有」</h3>
+          <p>搜不到只说明关键词不对。拿它下「这功能没实现」的结论，最容易误导人。</p></div></div>
+        <div class="tip"><span class="tip__n">05</span><div><h3>硬件的问题，先怀疑物理层</h3>
+          <p>线松了、供电不够、板子没上电。软件出身的最容易跳过这步，然后在代码里找三小时。</p></div></div>
+        <div class="tip"><span class="tip__n">06</span><div><h3>问人之前，先列「确认了什么 / 还没确认什么」</h3>
+          <p>「这个不 work」没人接得住。说清楚哪些验过哪些没验，五分钟就有人给你方向。</p></div></div>
       </div>
     </section>
 
-    <section class="slide light" data-act="附 · 生存小技巧" data-title="小技巧 · 验证期">
-      <p class="eyebrow">验证期 · 别被自己骗了</p>
-      <div class="tips">
-        <div class="tip">
-          <span class="tip__n">04</span>
-          <div>
-            <h3>先确认「改动真的进去了」，再上板</h3>
-            <p>编译通过不等于生效。花几十秒确认一下，能省掉一整轮「改了没反应」的无效验证——这是性价比最高的一个习惯。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">05</span>
-          <div>
-            <h3>日志里的数字，先搞清楚它测的是谁</h3>
-            <p>两个数字长期一模一样，往往不是巧合，是它们本来就来自同一个地方。拿它当两个独立指标看，会把你带到完全错误的方向。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">06</span>
-          <div>
-            <h3>「没搜到」不等于「没有」</h3>
-            <p>关键词搜不到，只说明你的关键词不对。用它来下「这个功能没实现」的结论，是新人最容易犯、也最容易造成误导的错。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="附 · 生存小技巧" data-title="小技巧 · 协作">
-      <p class="eyebrow">协作期 · 让别人帮得上你</p>
-      <div class="tips">
-        <div class="tip">
-          <span class="tip__n">07</span>
-          <div>
-            <h3>问人之前，先列「我确认了什么 / 还没确认什么」</h3>
-            <p>「这个不work，怎么办」没人接得住。「我确认了 A、B 正常，C 我没法验证」——这样问，五分钟就能有人给你方向。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">08</span>
-          <div>
-            <h3>硬件的问题，先怀疑物理层</h3>
-            <p>线松了、供电不够、接触不良、板子没上电。软件出身的人最容易跳过这一步，然后在代码里找三个小时。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">09</span>
-          <div>
-            <h3>改动范围要克制，别动公共的东西</h3>
-            <p>为了让自己的功能跑起来去改所有人共用的部分，是最快的路，也是最贵的路——你省下的半天，会变成别人排查一周。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="附 · 生存小技巧" data-title="小技巧 · 排查">
-      <p class="eyebrow">排查期 · 让线索自己浮出来</p>
-      <div class="tips">
-        <div class="tip">
-          <span class="tip__n">10</span>
-          <div>
-            <h3>先找一个「已知是好的」来对照</h3>
-            <p>另一个版本、另一台机器、另一份成熟实现，只要有一个能跑得好的，排查范围立刻从「所有可能」缩到「两边的差异」。没有参照物才需要从零推理。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">11</span>
-          <div>
-            <h3>抓崩溃现场，别只抓调用栈</h3>
-            <p>调用栈只告诉你死在哪一行，告诉不了你为什么。把当时的变量值一起打出来，很多时候一眼就能看到那个不该是零的东西变成了零。</p>
-          </div>
-        </div>
-        <div class="tip">
-          <span class="tip__n">12</span>
-          <div>
-            <h3>小心「排查动作」自己制造的问题</h3>
-            <p>连续崩几次可能触发设备恢复出厂，配网全丢，你以为是新 bug；杀进程的命令写宽了，会把自己的登录会话一起杀掉。查问题之前，先知道你的动作有什么副作用。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide light" data-act="附 · 生存小技巧" data-title="一条红线">
+<section class="slide light" data-act="收尾" data-title="一条红线">
       <p class="eyebrow eyebrow--warn">最后 · 一条红线</p>
       <div class="tips">
         <div class="tip tip--warn">
@@ -1250,21 +789,20 @@
       <p class="lead">这条我亲手踩过。<b>等它跑完，比什么都划算。</b></p>
     </section>
 
-    <!-- ══ 结尾 ══ -->
-
-    <section class="slide light" data-act="收尾" data-title="结尾金句">
+<section class="slide light" data-act="收尾" data-title="结尾金句">
       <p class="eyebrow">最后</p>
       <p class="quote">学校考的是「你会不会」，<br>工作看的是<em>「你靠不靠谱」</em>。</p>
       <hr class="rule">
       <p class="lead">技术能力会拉开差距，但那是第二年的事。<br>第一年，大家都在看同一件事：<b>交给你，放不放心。</b></p>
     </section>
 
-    <section class="slide light" data-act="收尾" data-title="靠谱的定义">
+<section class="slide light" data-act="收尾" data-title="靠谱的定义">
       <p class="eyebrow">而靠谱的定义很简单</p>
       <h2>你说做完了，<br>就是真的做完了；<br>你说验证过了，<br>就是真的验证过了。</h2>
       <hr class="rule">
       <p class="meta">以上。<br>祝各位入职顺利 —— 也欢迎随时来问问题。</p>
     </section>
+
 
     </div>
   </main>
@@ -1348,7 +886,7 @@
   function toggleIdx() { idx.classList.contains('is-open') ? closeIdx() : openIdx(); }
 
   /* timer */
-  var presets = [30, 45, 60, 15, 20];
+  var presets = [10, 15, 20, 30, 45];
   var pi = 0, remain = presets[0] * 60, running = false, tid = null;
   var timerBtn = document.getElementById('timer');
   var timerTxt = document.getElementById('timerText');
